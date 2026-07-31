@@ -1,0 +1,129 @@
+/* Case study template */
+
+.case-hero {
+  padding-block: var(--space-9) var(--space-7);
+}
+
+.case-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-bottom: var(--space-5);
+}
+
+.case-hero__title {
+  font-size: var(--text-h1);
+  margin-bottom: var(--space-4);
+}
+
+.case-hero__summary {
+  color: var(--color-text-muted);
+  max-width: var(--measure);
+}
+
+.case-cover {
+  margin-bottom: var(--space-8);
+  overflow: hidden;
+  border-radius: var(--radius-lg);
+  background-color: var(--color-surface);
+  aspect-ratio: 16 / 9;
+}
+
+.case-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.case-section {
+  padding-block: var(--space-7);
+  border-top: 1px solid var(--color-border);
+}
+
+.case-section__title {
+  margin-bottom: var(--space-4);
+}
+
+.case-section__body {
+  color: var(--color-text-muted);
+  max-width: var(--measure);
+  line-height: 1.65;
+}
+
+.case-section__body + .case-section__body {
+  margin-top: var(--space-4);
+}
+
+.case-section__list {
+  margin: var(--space-4) 0 0;
+  padding-left: 1.15rem;
+  color: var(--color-text-muted);
+  max-width: var(--measure);
+  line-height: 1.65;
+}
+
+.case-section__list li + li {
+  margin-top: var(--space-2);
+}
+
+.case-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-top: var(--space-4);
+}
+
+.case-tech__item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-elevated, var(--color-surface));
+  font-size: var(--text-caption);
+  color: var(--color-text);
+}
+
+.case-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3);
+  margin-top: var(--space-6);
+}
+
+.case-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-bottom: var(--space-5);
+  font-size: var(--text-small);
+  color: var(--color-text-muted);
+  text-decoration: none;
+}
+
+.case-back:hover,
+.case-back:focus-visible {
+  color: var(--color-accent);
+}
+
+.case-meta-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-5);
+  margin-block: var(--space-7);
+}
+
+.case-meta-grid__label {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-size: var(--text-caption);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 48rem) {
+  .case-meta-grid {
+    grid-template-columns: 1fr;
+  }
+}

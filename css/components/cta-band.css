@@ -1,0 +1,24 @@
+.cta-band {
+  padding-block: clamp(2.5rem, 4vw, 3.5rem);
+  background-color: var(--color-bg-elevated);
+  border-block: 1px solid var(--color-border);
+}
+
+.cta-band__inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--space-6);
+  width: var(--container);
+  margin-inline: auto;
+}
+
+.cta-band__title {
+  margin-bottom: var(--space-3);
+}
+
+.cta-band__text {
+  color: var(--color-text-muted);
+  max-width: var(--measure);
+}

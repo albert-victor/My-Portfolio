@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Services by Albart V Mwamalumbili — software engineering, web development, and graphics design."
+    />
+    <title>Services — Albart V Mwamalumbili</title>
+    <link rel="stylesheet" href="css/main.css?v=20260730" />
+  </head>
+  <body class="page page--services">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <script>
+      (() => {
+        try {
+          if (localStorage.getItem("avm-theme") === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        } catch (_) {}
+      })();
+    </script>
+
+    <header class="site-header" data-header>
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="index.html" aria-label="AVM home">AVM</a>
+        <nav class="site-nav" data-nav aria-label="Primary">
+          <button class="site-nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+            <span class="u-sr-only">Menu</span>
+            <svg class="site-nav__toggle-icon" width="24" height="24" aria-hidden="true" focusable="false">
+              <use href="assets/icons/ui/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="site-nav__backdrop" data-nav-backdrop></div>
+          <ul class="site-nav__list" id="primary-nav">
+            <li><a class="site-nav__link" data-nav-link href="index.html">Home</a></li>
+            <li class="site-nav__item" data-works-menu>
+              <button
+                class="site-nav__link"
+                type="button"
+                data-works-trigger
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="works-mega"
+              >
+                Works
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="works-mega" id="works-mega">
+                <div class="works-mega__grid">
+                  <a class="works-mega__card" data-works-link href="work/engineering.html">
+                    <span class="works-mega__eyebrow">Software</span>
+                    <span class="works-mega__title">Engineering</span>
+                    <span class="works-mega__text">AI/ML, systems &amp; tools</span>
+                  </a>
+                  <a class="works-mega__card" data-works-link href="work/web.html">
+                    <span class="works-mega__eyebrow">Web</span>
+                    <span class="works-mega__title">Development</span>
+                    <span class="works-mega__text">Live sites &amp; product fronts</span>
+                  </a>
+                  <a class="works-mega__card" data-works-link href="work/graphics.html">
+                    <span class="works-mega__eyebrow">Graphics</span>
+                    <span class="works-mega__title">Design</span>
+                    <span class="works-mega__text">Social, church &amp; print</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li><a class="site-nav__link" data-nav-link href="about.html">About me</a></li>
+            <li><a class="site-nav__link" data-nav-link href="services.html">My services</a></li>
+            <li><a class="site-nav__link" data-nav-link href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="site-header__actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme" title="Switch theme">
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" aria-hidden="true"><use href="assets/icons/ui/sprite.svg#icon-sun"></use></svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" aria-hidden="true"><use href="assets/icons/ui/sprite.svg#icon-moon"></use></svg>
+          </button>
+          <div class="resume-menu" data-resume-menu>
+            <button class="btn btn--secondary resume-menu__trigger" type="button" data-resume-trigger aria-expanded="false" aria-haspopup="true">Resume</button>
+            <div class="resume-menu__panel" data-resume-panel role="menu">
+              <span class="resume-menu__label">Download by focus</span>
+              <a class="resume-menu__item" role="menuitem" href="assets/cvs/resume-software-engineering.pdf" download><strong>Software Engineering</strong><span>Systems, APIs &amp; full-stack</span></a>
+              <a class="resume-menu__item" role="menuitem" href="assets/cvs/resume-web-designer.pdf" download><strong>Web Designer</strong><span>Sites, UX &amp; front-end</span></a>
+              <a class="resume-menu__item" role="menuitem" href="assets/cvs/resume-graphics-designer.pdf" download><strong>Graphics Designer</strong><span>Brand &amp; visual identity</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="page__main">
+      <section class="services-hero" aria-labelledby="services-title">
+        <div class="container services-hero__grid">
+          <div>
+            <header class="section-header">
+              <span class="section-header__eyebrow">Services</span>
+              <h1 class="section-header__title" id="services-title">What I deliver</h1>
+            </header>
+            <p class="services-hero__lead">
+              Not a list of buzzwords — three focused offers backed by shipped work in education, health, tourism, and business.
+            </p>
+          </div>
+          <aside class="services-hero__aside">
+            <p>Best fit when you need someone who can own the problem through launch.</p>
+            <ul>
+              <li>Clear scope &amp; timelines</li>
+              <li>Working product, not just mockups</li>
+              <li>Handoff you can maintain</li>
+            </ul>
+          </aside>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="offers-title">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-header__title" id="offers-title">Offers</h2>
+            <p class="section-header__lead">Pick a lane — or combine engineering, web, and graphics on one brief.</p>
+          </header>
+
+          <div class="services-grid">
+            <article class="service-card">
+              <div class="service-card__media">
+                <img src="assets/images/specializations/engineering.jpg" alt="" width="800" height="500" loading="lazy" />
+                <span class="service-card__badge">01 — Engineering</span>
+              </div>
+              <div class="service-card__body">
+                <h3 class="service-card__title">Software Engineering</h3>
+                <p class="service-card__text">
+                  Full-stack systems and APIs — the same craft behind Study Tracker, AMCOS, and MWONGOZO SMART.
+                </p>
+                <ul class="service-card__list">
+                  <li>REST APIs &amp; auth</li>
+                  <li>MySQL / PostgreSQL design</li>
+                  <li>Python, PHP, Django, Laravel</li>
+                  <li>Workflow automation</li>
+                </ul>
+                <div class="service-card__actions">
+                  <a class="btn btn--primary" href="work/engineering.html">See engineering work</a>
+                  <a class="btn btn--ghost" href="contact.html">Brief this</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-card__media">
+                <img src="assets/images/specializations/web.jpg" alt="" width="800" height="500" loading="lazy" />
+                <span class="service-card__badge">02 — Web</span>
+              </div>
+              <div class="service-card__body">
+                <h3 class="service-card__title">Web Development</h3>
+                <p class="service-card__text">
+                  Marketing and product sites that load fast and explain the offer clearly — tourism, health, and local business.
+                </p>
+                <ul class="service-card__list">
+                  <li>Responsive, accessible UI</li>
+                  <li>HTML / CSS / JavaScript</li>
+                  <li>Performance &amp; SEO basics</li>
+                  <li>Forms &amp; conversions</li>
+                </ul>
+                <div class="service-card__actions">
+                  <a class="btn btn--primary" href="work/web.html">See web work</a>
+                  <a class="btn btn--ghost" href="contact.html">Brief this</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="service-card">
+              <div class="service-card__media">
+                <img src="assets/images/specializations/design.jpg" alt="" width="800" height="500" loading="lazy" />
+                <span class="service-card__badge">03 — Graphics</span>
+              </div>
+              <div class="service-card__body">
+                <h3 class="service-card__title">Graphics Design</h3>
+                <p class="service-card__text">
+                  Brand and UI assets that stay coherent across print and digital — live portfolio on Instagram.
+                </p>
+                <ul class="service-card__list">
+                  <li>Identity &amp; brand marks</li>
+                  <li>Posters &amp; campaign visuals</li>
+                  <li>UI assets for products</li>
+                  <li>Photoshop / Illustrator / Canva</li>
+                </ul>
+                <div class="service-card__actions">
+                  <a class="btn btn--primary" href="work/graphics.html">See graphics work</a>
+                  <a class="btn btn--ghost" href="contact.html">Brief this</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="process-title">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-header__title" id="process-title">How we work</h2>
+            <p class="section-header__lead">A short path from brief to shipped work.</p>
+          </header>
+          <ol class="services-process">
+            <li class="services-process__item">
+              <span class="services-process__index">01</span>
+              <h3 class="services-process__title">Discover</h3>
+              <p class="services-process__text">Goals, users, constraints, and what "done" looks like.</p>
+            </li>
+            <li class="services-process__item">
+              <span class="services-process__index">02</span>
+              <h3 class="services-process__title">Design</h3>
+              <p class="services-process__text">Structure, interface, and visual direction before build.</p>
+            </li>
+            <li class="services-process__item">
+              <span class="services-process__index">03</span>
+              <h3 class="services-process__title">Build</h3>
+              <p class="services-process__text">Clean implementation with review checkpoints.</p>
+            </li>
+            <li class="services-process__item">
+              <span class="services-process__index">04</span>
+              <h3 class="services-process__title">Ship</h3>
+              <p class="services-process__text">Launch, handoff docs, and optional iteration.</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="fit-title">
+        <div class="container">
+          <header class="section-header">
+            <h2 class="section-header__title" id="fit-title">Good fit / not a fit</h2>
+          </header>
+          <div class="services-fit">
+            <div class="services-fit__card">
+              <h3>Good fit</h3>
+              <ul>
+                <li>You need a working system or site, not only slides</li>
+                <li>Scope can be clear within a few conversations</li>
+                <li>You value ownership from problem to launch</li>
+              </ul>
+            </div>
+            <div class="services-fit__card">
+              <h3>Not a fit</h3>
+              <ul>
+                <li>You only need a logo with no direction</li>
+                <li>Huge enterprise programs with no decision owner</li>
+                <li>Speculative "idea only" work with no brief</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="services-cta-title">
+        <div class="cta-band__inner">
+          <div>
+            <h2 class="cta-band__title" id="services-cta-title">Ready to brief a project?</h2>
+            <p class="cta-band__text">Share context and goals — I'll reply with fit and next steps.</p>
+          </div>
+          <a class="btn btn--primary" href="contact.html">Start a conversation</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-footer>
+      <div class="site-footer__cta">
+        <div class="site-footer__cta-inner">
+          <p class="site-footer__mark">AVM</p>
+          <div>
+            <p class="site-footer__cta-title">Have a brief in mind?</p>
+            <p class="site-footer__cta-text">Engineering, web, or graphics — let's talk.</p>
+          </div>
+          <a class="btn btn--primary" href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="site-footer__inner">
+        <div class="site-footer__brand-block">
+          <div class="site-footer__profile">
+            <img
+              class="site-footer__avatar"
+              src="assets/images/about/footer.jpg"
+              alt="Albart V Mwamalumbili"
+              width="96"
+              height="96"
+              loading="lazy"
+            />
+            <div>
+              <p class="site-footer__brand">Albart V Mwamalumbili</p>
+              <p class="site-footer__text">
+                Software Engineer, Web Developer, and Graphics Designer building systems people actually use.
+              </p>
+              <a class="site-footer__phone" href="tel:+255748952582">+255 748 952 582</a>
+
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="site-footer__heading">Explore</p>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="work.html">Works</a></li>
+            <li><a class="site-footer__link" href="about.html">About me</a></li>
+            <li><a class="site-footer__link" href="services.html">My services</a></li>
+            <li><a class="site-footer__link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="site-footer__heading">Connect</p>
+          <div class="site-footer__social">
+            <a class="site-footer__social-link" href="mailto:mwamalumbilialbart@gmail.com" aria-label="Email">
+              <svg width="18" height="18" aria-hidden="true"><use href="assets/icons/ui/sprite.svg#icon-mail"></use></svg>
+            </a>
+            <a class="site-footer__social-link" href="https://www.linkedin.com/in/albart-mwamalumbili-b3b69b377/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn">
+              <svg width="18" height="18" aria-hidden="true"><use href="assets/icons/ui/sprite.svg#icon-linkedin"></use></svg>
+            </a>
+            <a class="site-footer__social-link" href="https://github.com/albert-victor" rel="noopener noreferrer" target="_blank" aria-label="GitHub">
+              <svg width="18" height="18" aria-hidden="true"><use href="assets/icons/ui/sprite.svg#icon-github"></use></svg>
+            </a>
+            <a class="site-footer__social-link" href="https://www.instagram.com/_i_am_albertvictor/" rel="noopener noreferrer" target="_blank" aria-label="Instagram">
+              <svg width="18" height="18" aria-hidden="true"><use href="assets/icons/ui/sprite.svg#icon-instagram"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-year></span> Albart V Mwamalumbili</p>
+        <a class="site-footer__top" href="#main">Back to top</a>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js?v=20260730"></script>
+  </body>
+</html>

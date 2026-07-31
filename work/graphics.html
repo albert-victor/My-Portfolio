@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Graphics design work by Albart V Mwamalumbili – social media designs, church flyers, and print work." />
+    <title>Graphics Design – AVM</title>
+    <link rel="stylesheet" href="../css/main.css?v=20260730" />
+  </head>
+  <body class="page page--field">
+    <a class="skip-link" href="#main">Skip to content</a>
+    <script>
+      (() => {
+        try {
+          if (localStorage.getItem("avm-theme") === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        } catch (_) {}
+      })();
+    </script>
+
+    <header class="site-header" data-header>
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="../index.html" aria-label="AVM home">AVM</a>
+        <nav class="site-nav" data-nav aria-label="Primary">
+          <button class="site-nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+            <span class="u-sr-only">Menu</span>
+            <svg class="site-nav__toggle-icon" width="24" height="24" aria-hidden="true"><use href="../assets/icons/ui/sprite.svg#icon-menu"></use></svg>
+          </button>
+          <div class="site-nav__backdrop" data-nav-backdrop></div>
+          <ul class="site-nav__list" id="primary-nav">
+            <li><a class="site-nav__link" data-nav-link href="../index.html">Home</a></li>
+            <li class="site-nav__item" data-works-menu>
+              <button
+                class="site-nav__link"
+                type="button"
+                data-works-trigger
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="works-mega"
+              >
+                Works
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="works-mega" id="works-mega">
+                <div class="works-mega__grid">
+                  <a class="works-mega__card" data-works-link href="engineering.html">
+                    <span class="works-mega__eyebrow">Software</span>
+                    <span class="works-mega__title">Engineering</span>
+                    <span class="works-mega__text">AI/ML, systems &amp; tools</span>
+                  </a>
+                  <a class="works-mega__card" data-works-link href="web.html">
+                    <span class="works-mega__eyebrow">Web</span>
+                    <span class="works-mega__title">Development</span>
+                    <span class="works-mega__text">Live sites &amp; product fronts</span>
+                  </a>
+                  <a class="works-mega__card" data-works-link href="graphics.html">
+                    <span class="works-mega__eyebrow">Graphics</span>
+                    <span class="works-mega__title">Design</span>
+                    <span class="works-mega__text">Social, church &amp; print</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li><a class="site-nav__link" data-nav-link href="../about.html">About me</a></li>
+            <li><a class="site-nav__link" data-nav-link href="../services.html">My services</a></li>
+            <li><a class="site-nav__link" data-nav-link href="../contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="site-header__actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme">
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" aria-hidden="true"><use href="../assets/icons/ui/sprite.svg#icon-sun"></use></svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" aria-hidden="true"><use href="../assets/icons/ui/sprite.svg#icon-moon"></use></svg>
+          </button>
+          <div class="resume-menu" data-resume-menu>
+            <button class="btn btn--secondary resume-menu__trigger" type="button" data-resume-trigger aria-expanded="false" aria-haspopup="true">Resume</button>
+            <div class="resume-menu__panel" data-resume-panel role="menu">
+              <span class="resume-menu__label">Download by focus</span>
+              <a class="resume-menu__item" role="menuitem" href="../assets/cvs/resume-software-engineering.pdf" download><strong>Software Engineering</strong><span>Systems, APIs &amp; full-stack</span></a>
+              <a class="resume-menu__item" role="menuitem" href="../assets/cvs/resume-web-designer.pdf" download><strong>Web Designer</strong><span>Sites, UX &amp; front-end</span></a>
+              <a class="resume-menu__item" role="menuitem" href="../assets/cvs/resume-graphics-designer.pdf" download><strong>Graphics Designer</strong><span>Brand &amp; visual identity</span></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="page__main">
+      <section class="field-hero">
+        <div class="container field-hero__grid">
+          <div>
+            <span class="field-hero__eyebrow">Graphics Design</span>
+            <h1 class="field-hero__title">Visual work with intent</h1>
+            <p class="field-hero__lead">
+              Social media designs, church flyers, and print campaigns – built in Photoshop, Illustrator, and Canva,
+              with a live portfolio on Instagram.
+            </p>
+            <div class="field-hero__actions">
+              <a class="btn btn--primary" href="https://www.instagram.com/_i_am_albertvictor/" rel="noopener noreferrer" target="_blank">Open Instagram</a>
+              <a class="btn btn--secondary" href="../assets/cvs/resume-graphics-designer.pdf" download>Download graphics resume</a>
+            </div>
+          </div>
+          <div class="field-hero__media">
+            <img src="../assets/images/projects/covers/graphics.jpg" alt="Selected social media design work" width="1200" height="825" loading="eager" />
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="gallery">
+        <div class="container">
+          <header class="section-header">
+            <span class="section-header__eyebrow">Portfolio</span>
+            <h2 class="section-header__title">Design gallery</h2>
+            <p class="section-header__lead">Filter by social media, church flyers, or print designs.</p>
+          </header>
+
+          <div class="gallery-filters-bar">
+          <div class="gallery-filters" data-gallery-filter role="group" aria-label="Filter graphics by category">
+            <button class="gallery-filters__btn" type="button" data-filter="all" aria-pressed="true">All</button>
+            <button class="gallery-filters__btn" type="button" data-filter="social-media" aria-pressed="false">Social Media</button>
+            <button class="gallery-filters__btn" type="button" data-filter="church-flyers" id="flyers" aria-pressed="false">Church Flyers</button>
+            <button class="gallery-filters__btn" type="button" data-filter="print-designs" id="print" aria-pressed="false">Print Designs</button>
+          </div>
+          </div>
+
+          <div class="gallery-grid">
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/bonanza.jpg" alt="Bonanza — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Bonanza</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/chino.png" alt="Chino — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Chino</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/container.jpg" alt="Container — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Container</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/cover-image.jpg" alt="Cover Image — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Cover Image</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/cover6.jpg" alt="Cover6 — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Cover6</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/farm.png" alt="Farm — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Farm</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/fashion-week.jpg" alt="Fashion Week — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Fashion Week</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/fathers.jpg" alt="Fathers — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Fathers</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/frontpage.jpg" alt="Frontpage — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Frontpage</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/fun.jpg" alt="Fun — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Fun</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/glory.jpg" alt="Glory — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Glory</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/independence.png" alt="Independence — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Independence</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/influence.jpg" alt="Influence — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Influence</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/keisha.jpg" alt="Keisha — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Keisha</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/monday.jpg" alt="Monday — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Monday</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/rahma.png" alt="Rahma — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Rahma</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/summer.jpg" alt="Summer — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Summer</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/university-pack.jpg" alt="University Pack — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">University Pack</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="social-media">
+              <img src="../assets/images/projects/graphic-design/social-media/wazo.png" alt="Wazo — Social Media" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Social Media</span>
+                <span class="gallery-item__title">Wazo</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="church-flyers">
+              <img src="../assets/images/projects/graphic-design/church-flyers/easter.jpg" alt="Easter — Church Flyers" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Church Flyers</span>
+                <span class="gallery-item__title">Easter</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="church-flyers">
+              <img src="../assets/images/projects/graphic-design/church-flyers/ens-4.jpg" alt="Ens 4 — Church Flyers" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Church Flyers</span>
+                <span class="gallery-item__title">Ens 4</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="church-flyers">
+              <img src="../assets/images/projects/graphic-design/church-flyers/ens-print.jpg" alt="Ens Print — Church Flyers" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Church Flyers</span>
+                <span class="gallery-item__title">Ens Print</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="church-flyers">
+              <img src="../assets/images/projects/graphic-design/church-flyers/good.jpg" alt="Good — Church Flyers" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Church Flyers</span>
+                <span class="gallery-item__title">Good</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="church-flyers">
+              <img src="../assets/images/projects/graphic-design/church-flyers/happy-time.png" alt="Happy Time — Church Flyers" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Church Flyers</span>
+                <span class="gallery-item__title">Happy Time</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="church-flyers">
+              <img src="../assets/images/projects/graphic-design/church-flyers/kairuki.png" alt="Kairuki — Church Flyers" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Church Flyers</span>
+                <span class="gallery-item__title">Kairuki</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="church-flyers">
+              <img src="../assets/images/projects/graphic-design/church-flyers/nnn.png" alt="Nnn — Church Flyers" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Church Flyers</span>
+                <span class="gallery-item__title">Nnn</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="church-flyers">
+              <img src="../assets/images/projects/graphic-design/church-flyers/power.png" alt="Power — Church Flyers" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Church Flyers</span>
+                <span class="gallery-item__title">Power</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="church-flyers">
+              <img src="../assets/images/projects/graphic-design/church-flyers/praise.png" alt="Praise — Church Flyers" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Church Flyers</span>
+                <span class="gallery-item__title">Praise</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="church-flyers">
+              <img src="../assets/images/projects/graphic-design/church-flyers/wazo2.png" alt="Wazo2 — Church Flyers" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Church Flyers</span>
+                <span class="gallery-item__title">Wazo2</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="print-designs">
+              <img src="../assets/images/projects/graphic-design/print-designs/admit.jpg" alt="Admit — Print Designs" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Print Designs</span>
+                <span class="gallery-item__title">Admit</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="print-designs">
+              <img src="../assets/images/projects/graphic-design/print-designs/albert-programming.jpg" alt="Albert Programming — Print Designs" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Print Designs</span>
+                <span class="gallery-item__title">Albert Programming</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="print-designs">
+              <img src="../assets/images/projects/graphic-design/print-designs/catwalk.jpg" alt="Catwalk — Print Designs" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Print Designs</span>
+                <span class="gallery-item__title">Catwalk</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="print-designs">
+              <img src="../assets/images/projects/graphic-design/print-designs/charity-mockup.jpg" alt="Charity Mockup — Print Designs" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Print Designs</span>
+                <span class="gallery-item__title">Charity Mockup</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="print-designs">
+              <img src="../assets/images/projects/graphic-design/print-designs/kilomwa1.jpg" alt="Kilomwa1 — Print Designs" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Print Designs</span>
+                <span class="gallery-item__title">Kilomwa1</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="print-designs">
+              <img src="../assets/images/projects/graphic-design/print-designs/malware-cyber.jpg" alt="Malware Cyber — Print Designs" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Print Designs</span>
+                <span class="gallery-item__title">Malware Cyber</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="print-designs">
+              <img src="../assets/images/projects/graphic-design/print-designs/opson.jpg" alt="Opson — Print Designs" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Print Designs</span>
+                <span class="gallery-item__title">Opson</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="print-designs">
+              <img src="../assets/images/projects/graphic-design/print-designs/poster-mockup.jpg" alt="Poster Mockup — Print Designs" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Print Designs</span>
+                <span class="gallery-item__title">Poster Mockup</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="print-designs">
+              <img src="../assets/images/projects/graphic-design/print-designs/printing-poster.jpg" alt="Printing Poster — Print Designs" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Print Designs</span>
+                <span class="gallery-item__title">Printing Poster</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="print-designs">
+              <img src="../assets/images/projects/graphic-design/print-designs/ticket-mock.jpg" alt="Ticket Mock — Print Designs" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Print Designs</span>
+                <span class="gallery-item__title">Ticket Mock</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="print-designs">
+              <img src="../assets/images/projects/graphic-design/print-designs/ticket-mockup.jpg" alt="Ticket Mockup — Print Designs" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Print Designs</span>
+                <span class="gallery-item__title">Ticket Mockup</span>
+              </figcaption>
+            </figure>
+            <figure class="gallery-item" data-gallery-cat="print-designs">
+              <img src="../assets/images/projects/graphic-design/print-designs/updated.jpg" alt="Updated — Print Designs" width="800" height="1000" loading="lazy" />
+              <figcaption class="gallery-item__meta">
+                <span class="gallery-item__tag">Print Designs</span>
+                <span class="gallery-item__title">Updated</span>
+              </figcaption>
+            </figure>
+          </div>
+</div>
+      </section>
+
+      <section class="cta-band">
+        <div class="cta-band__inner">
+          <div>
+            <h2 class="cta-band__title">Need sharper brand visuals?</h2>
+            <p class="cta-band__text">Share the brief and current assets – I'll reply with fit and next steps.</p>
+          </div>
+          <a class="btn btn--primary" href="../contact.html">Contact</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-footer>
+      <div class="site-footer__cta">
+        <div class="site-footer__cta-inner">
+          <p class="site-footer__mark">AVM</p>
+          <div>
+            <p class="site-footer__cta-title">Have a brief in mind?</p>
+            <p class="site-footer__cta-text">Engineering, web, or graphics – let's talk.</p>
+          </div>
+          <a class="btn btn--primary" href="../contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="site-footer__inner">
+        <div class="site-footer__brand-block">
+          <div class="site-footer__profile">
+            <img class="site-footer__avatar" src="../assets/images/about/footer.jpg" alt="Albart V Mwamalumbili" width="96" height="96" loading="lazy" />
+            <div>
+              <p class="site-footer__brand">Albart V Mwamalumbili</p>
+              <p class="site-footer__text">
+                Software Engineer, Web Developer, and Graphics Designer building systems people actually use.
+              </p>
+              <a class="site-footer__phone" href="tel:+255748952582">+255 748 952 582</a>
+
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="site-footer__heading">Explore</p>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="../work.html">Works</a></li>
+            <li><a class="site-footer__link" href="../about.html">About me</a></li>
+            <li><a class="site-footer__link" href="../services.html">My services</a></li>
+            <li><a class="site-footer__link" href="../contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="site-footer__heading">Connect</p>
+          <div class="site-footer__social">
+            <a class="site-footer__social-link" href="mailto:mwamalumbilialbart@gmail.com" aria-label="Email">
+              <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="../assets/icons/ui/sprite.svg#icon-mail"></use></svg>
+            </a>
+            <a class="site-footer__social-link" href="https://www.linkedin.com/in/albart-mwamalumbili-b3b69b377/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn">
+              <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="../assets/icons/ui/sprite.svg#icon-linkedin"></use></svg>
+            </a>
+            <a class="site-footer__social-link" href="https://github.com/albert-victor" rel="noopener noreferrer" target="_blank" aria-label="GitHub">
+              <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="../assets/icons/ui/sprite.svg#icon-github"></use></svg>
+            </a>
+            <a class="site-footer__social-link" href="https://www.instagram.com/_i_am_albertvictor/" rel="noopener noreferrer" target="_blank" aria-label="Instagram">
+              <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="../assets/icons/ui/sprite.svg#icon-instagram"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-year></span> Albart V Mwamalumbili</p>
+        <a class="site-footer__top" href="#main">Back to top</a>
+      </div>
+    </footer>
+    <script type="module" src="../js/main.js?v=20260730"></script>
+  </body>
+</html>

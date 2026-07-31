@@ -1,0 +1,98 @@
+/**
+ * Layout primitives — containers, sections, grids, page shell.
+ */
+
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page__main {
+  flex: 1 0 auto;
+}
+
+.container {
+  width: var(--container);
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-padding-y);
+}
+
+.section--tight {
+  padding-block: var(--space-7);
+}
+
+.section__header {
+  margin-bottom: var(--space-5);
+  max-width: var(--measure);
+}
+
+.section__eyebrow {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.section__title {
+  margin-bottom: var(--space-4);
+}
+
+.section__lead {
+  color: var(--color-text-muted);
+  font-size: var(--text-body);
+  line-height: var(--leading-normal);
+}
+
+.grid {
+  display: grid;
+  gap: var(--grid-gutter);
+}
+
+.grid--2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.grid--12 {
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.stack--lg {
+  gap: var(--space-6);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+@media (max-width: 62rem) {
+  .grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 48rem) {
+  .grid--2,
+  .grid--3 {
+    grid-template-columns: 1fr;
+  }
+}

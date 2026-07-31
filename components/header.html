@@ -1,0 +1,113 @@
+<!--
+  Canonical header (root pages).
+  Brand: AVM | includes Home + theme toggle + Works mega menu + resume dropdown
+-->
+<script>
+  (() => {
+    try {
+      if (localStorage.getItem("avm-theme") === "dark") {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    } catch (_) {}
+  })();
+</script>
+
+<header class="site-header" data-header>
+  <div class="site-header__inner">
+    <a class="site-header__brand" href="index.html" aria-label="AVM home">AVM</a>
+
+    <nav class="site-nav" data-nav aria-label="Primary">
+      <button
+        class="site-nav__toggle"
+        type="button"
+        data-nav-toggle
+        aria-expanded="false"
+        aria-controls="primary-nav"
+      >
+        <span class="u-sr-only">Menu</span>
+        <svg class="site-nav__toggle-icon" width="24" height="24" aria-hidden="true" focusable="false">
+          <use href="assets/icons/ui/sprite.svg#icon-menu"></use>
+        </svg>
+      </button>
+
+      <div class="site-nav__backdrop" data-nav-backdrop></div>
+
+      <ul class="site-nav__list" id="primary-nav">
+        <li><a class="site-nav__link" data-nav-link href="index.html">Home</a></li>
+        <li class="site-nav__item" data-works-menu>
+          <button
+            class="site-nav__link"
+            type="button"
+            data-works-trigger
+            aria-expanded="false"
+            aria-haspopup="true"
+            aria-controls="works-mega"
+          >
+            Works
+            <span class="site-nav__caret" aria-hidden="true"></span>
+          </button>
+          <div class="works-mega" id="works-mega">
+            <div class="works-mega__grid">
+              <a class="works-mega__card" data-works-link href="work/engineering.html">
+                <span class="works-mega__eyebrow">Software</span>
+                <span class="works-mega__title">Engineering</span>
+                <span class="works-mega__text">AI/ML, systems &amp; tools</span>
+              </a>
+              <a class="works-mega__card" data-works-link href="work/web.html">
+                <span class="works-mega__eyebrow">Web</span>
+                <span class="works-mega__title">Development</span>
+                <span class="works-mega__text">Live sites &amp; product fronts</span>
+              </a>
+              <a class="works-mega__card" data-works-link href="work/graphics.html">
+                <span class="works-mega__eyebrow">Graphics</span>
+                <span class="works-mega__title">Design</span>
+                <span class="works-mega__text">Social, church &amp; print</span>
+              </a>
+            </div>
+          </div>
+        </li>
+        <li><a class="site-nav__link" data-nav-link href="about.html">About me</a></li>
+        <li><a class="site-nav__link" data-nav-link href="services.html">My services</a></li>
+        <li><a class="site-nav__link" data-nav-link href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="site-header__actions">
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" title="Switch theme">
+        <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" aria-hidden="true" focusable="false">
+          <use href="assets/icons/ui/sprite.svg#icon-sun"></use>
+        </svg>
+        <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" aria-hidden="true" focusable="false">
+          <use href="assets/icons/ui/sprite.svg#icon-moon"></use>
+        </svg>
+      </button>
+
+      <div class="resume-menu" data-resume-menu>
+        <button
+          class="btn btn--secondary resume-menu__trigger"
+          type="button"
+          data-resume-trigger
+          aria-expanded="false"
+          aria-haspopup="true"
+        >
+          Resume
+        </button>
+        <div class="resume-menu__panel" data-resume-panel role="menu" aria-label="Choose a resume">
+          <span class="resume-menu__label">Download by focus</span>
+          <a class="resume-menu__item" role="menuitem" href="assets/cvs/resume-software-engineering.pdf" download>
+            <strong>Software Engineering</strong>
+            <span>Systems, APIs &amp; full-stack</span>
+          </a>
+          <a class="resume-menu__item" role="menuitem" href="assets/cvs/resume-web-designer.pdf" download>
+            <strong>Web Designer</strong>
+            <span>Sites, UX &amp; front-end</span>
+          </a>
+          <a class="resume-menu__item" role="menuitem" href="assets/cvs/resume-graphics-designer.pdf" download>
+            <strong>Graphics Designer</strong>
+            <span>Brand &amp; visual identity</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,86 @@
+/* Work index – category hubs (mega menu destinations) */
+
+.work-shell {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.work-hubs {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
+}
+
+.work-hub-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding: var(--space-6) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  color: inherit;
+  background:
+    linear-gradient(
+      160deg,
+      color-mix(in srgb, var(--color-bg-elevated) 88%, var(--color-accent) 12%),
+      var(--color-bg-elevated)
+    );
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+.work-hub-card:hover {
+  border-color: color-mix(in srgb, var(--color-accent) 45%, var(--color-border));
+  color: inherit;
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-lift);
+}
+
+.work-hub-card__eyebrow {
+  font-size: 0.7rem;
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.work-hub-card__title {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+  font-weight: var(--weight-bold);
+  color: var(--color-text);
+}
+
+.work-hub-card__text {
+  font-size: var(--text-small);
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+/* Shared grids still used on hub pages */
+.work-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: var(--space-6) var(--grid-gutter);
+}
+
+.work-grid--3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 62rem) {
+  .work-hubs,
+  .work-grid--3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 48rem) {
+  .work-hubs,
+  .work-grid,
+  .work-grid--3 {
+    grid-template-columns: 1fr;
+  }
+}

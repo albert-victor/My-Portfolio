@@ -1,0 +1,28 @@
+/* Section header styles live primarily in layout.css (.section__*).
+   This file holds page-agnostic refinements for the shared pattern. */
+
+.section-header {
+  margin-bottom: var(--space-5);
+  max-width: var(--measure);
+}
+
+.section-header__eyebrow {
+  display: block;
+  margin-bottom: var(--space-2);
+  font-size: var(--text-caption);
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.section-header__lead {
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
+.section-header__title {
+  margin-bottom: var(--space-3);
+  color: var(--color-text);
+  letter-spacing: -0.02em;
+}

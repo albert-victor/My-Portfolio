@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contact Albart V Mwamalumbili for roles, freelance projects, and collaborations."
+    />
+    <title>Contact — Albart V Mwamalumbili</title>
+    <link rel="stylesheet" href="css/main.css?v=20260730" />
+  </head>
+  <body class="page page--contact">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <script>
+      (() => {
+        try {
+          if (localStorage.getItem("avm-theme") === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        } catch (_) {}
+      })();
+    </script>
+
+    <header class="site-header" data-header>
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="index.html" aria-label="AVM home">AVM</a>
+
+        <nav class="site-nav" data-nav aria-label="Primary">
+          <button
+            class="site-nav__toggle"
+            type="button"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-controls="primary-nav"
+          >
+            <span class="u-sr-only">Menu</span>
+            <svg class="site-nav__toggle-icon" width="24" height="24" aria-hidden="true" focusable="false">
+              <use href="assets/icons/ui/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+
+          <div class="site-nav__backdrop" data-nav-backdrop></div>
+          <ul class="site-nav__list" id="primary-nav">
+            <li><a class="site-nav__link" data-nav-link href="index.html">Home</a></li>
+            <li class="site-nav__item" data-works-menu>
+              <button
+                class="site-nav__link"
+                type="button"
+                data-works-trigger
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="works-mega"
+              >
+                Works
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="works-mega" id="works-mega">
+                <div class="works-mega__grid">
+                  <a class="works-mega__card" data-works-link href="work/engineering.html">
+                    <span class="works-mega__eyebrow">Software</span>
+                    <span class="works-mega__title">Engineering</span>
+                    <span class="works-mega__text">AI/ML, systems &amp; tools</span>
+                  </a>
+                  <a class="works-mega__card" data-works-link href="work/web.html">
+                    <span class="works-mega__eyebrow">Web</span>
+                    <span class="works-mega__title">Development</span>
+                    <span class="works-mega__text">Live sites &amp; product fronts</span>
+                  </a>
+                  <a class="works-mega__card" data-works-link href="work/graphics.html">
+                    <span class="works-mega__eyebrow">Graphics</span>
+                    <span class="works-mega__title">Design</span>
+                    <span class="works-mega__text">Social, church &amp; print</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li><a class="site-nav__link" data-nav-link href="about.html">About me</a></li>
+            <li><a class="site-nav__link" data-nav-link href="services.html">My services</a></li>
+            <li><a class="site-nav__link" data-nav-link href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-header__actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" title="Switch theme">
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" aria-hidden="true" focusable="false">
+              <use href="assets/icons/ui/sprite.svg#icon-sun"></use>
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" aria-hidden="true" focusable="false">
+              <use href="assets/icons/ui/sprite.svg#icon-moon"></use>
+            </svg>
+          </button>
+
+          <div class="resume-menu" data-resume-menu>
+            <button
+              class="btn btn--secondary resume-menu__trigger"
+              type="button"
+              data-resume-trigger
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              Resume
+            </button>
+            <div class="resume-menu__panel" data-resume-panel role="menu" aria-label="Choose a resume">
+              <span class="resume-menu__label">Download by focus</span>
+              <a class="resume-menu__item" role="menuitem" href="assets/cvs/resume-software-engineering.pdf" download>
+                <strong>Software Engineering</strong><span>Systems, APIs &amp; full-stack</span>
+              </a>
+              <a class="resume-menu__item" role="menuitem" href="assets/cvs/resume-web-designer.pdf" download>
+                <strong>Web Designer</strong><span>Sites, UX &amp; front-end</span>
+              </a>
+              <a class="resume-menu__item" role="menuitem" href="assets/cvs/resume-graphics-designer.pdf" download>
+                <strong>Graphics Designer</strong><span>Brand &amp; visual identity</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="page__main">
+      <section class="contact-hero" aria-labelledby="contact-title">
+        <div class="contact-hero__glow" aria-hidden="true"></div>
+        <div class="container contact-hero__inner">
+          <div class="contact-hero__copy">
+            <p class="contact-hero__status">
+              <span class="contact-hero__pulse" aria-hidden="true"></span>
+              Open for roles &amp; freelance
+            </p>
+            <h1 class="contact-hero__title" id="contact-title">
+              Let's make something <em>worth shipping</em>
+            </h1>
+            <p class="contact-hero__lead">
+              Tell me about the system, site, or brand brief. I reply personally — usually within a day.
+            </p>
+          </div>
+
+          <div class="contact-channels" role="list">
+            <a
+              class="contact-channel"
+              role="listitem"
+              href="tel:+255748952582"
+              data-tilt
+            >
+              <span class="contact-channel__icon" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" focusable="false">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.81.36 1.6.7 2.34a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.74.34 1.53.57 2.34.7A2 2 0 0 1 22 16.92z" />
+                </svg>
+              </span>
+              <span class="contact-channel__meta">
+                <span class="contact-channel__label">Phone / WhatsApp</span>
+                <span class="contact-channel__value">+255 748 952 582</span>
+              </span>
+              <span class="contact-channel__hint">Call / chat</span>
+            </a>
+
+            <a
+              class="contact-channel"
+              role="listitem"
+              href="mailto:mwamalumbilialbart@gmail.com"
+              data-tilt
+            >
+              <span class="contact-channel__icon" aria-hidden="true">
+                <svg width="22" height="22" focusable="false">
+                  <use href="assets/icons/ui/sprite.svg#icon-mail"></use>
+                </svg>
+              </span>
+              <span class="contact-channel__meta">
+                <span class="contact-channel__label">Email</span>
+                <span class="contact-channel__value">mwamalumbilialbart@gmail.com</span>
+              </span>
+              <span class="contact-channel__hint">Fastest</span>
+            </a>
+
+            <a
+              class="contact-channel"
+              role="listitem"
+              href="https://www.linkedin.com/in/albart-mwamalumbili-b3b69b377/"
+              rel="noopener noreferrer"
+              target="_blank"
+              data-tilt
+            >
+              <span class="contact-channel__icon" aria-hidden="true">
+                <svg width="22" height="22" focusable="false">
+                  <use href="assets/icons/ui/sprite.svg#icon-linkedin"></use>
+                </svg>
+              </span>
+              <span class="contact-channel__meta">
+                <span class="contact-channel__label">LinkedIn</span>
+                <span class="contact-channel__value">albart-mwamalumbili</span>
+              </span>
+              <span class="contact-channel__hint">Roles</span>
+            </a>
+
+            <a
+              class="contact-channel"
+              role="listitem"
+              href="https://github.com/albert-victor"
+              rel="noopener noreferrer"
+              target="_blank"
+              data-tilt
+            >
+              <span class="contact-channel__icon" aria-hidden="true">
+                <svg width="22" height="22" focusable="false">
+                  <use href="assets/icons/ui/sprite.svg#icon-github"></use>
+                </svg>
+              </span>
+              <span class="contact-channel__meta">
+                <span class="contact-channel__label">GitHub</span>
+                <span class="contact-channel__value">albert-victor</span>
+              </span>
+              <span class="contact-channel__hint">Code</span>
+            </a>
+
+            <a
+              class="contact-channel"
+              role="listitem"
+              href="https://www.instagram.com/_i_am_albertvictor/"
+              rel="noopener noreferrer"
+              target="_blank"
+              data-tilt
+            >
+              <span class="contact-channel__icon" aria-hidden="true">
+                <svg width="22" height="22" focusable="false">
+                  <use href="assets/icons/ui/sprite.svg#icon-instagram"></use>
+                </svg>
+              </span>
+              <span class="contact-channel__meta">
+                <span class="contact-channel__label">Instagram</span>
+                <span class="contact-channel__value">@_i_am_albertvictor</span>
+              </span>
+              <span class="contact-channel__hint">Graphics</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-panel" aria-labelledby="form-title">
+        <div class="container contact-panel__grid">
+          <aside class="contact-aside">
+            <h2 class="contact-aside__title" id="form-title">What are we building?</h2>
+            <p class="contact-aside__text">
+              Pick a focus — it fills the subject so you can jump straight into the brief.
+            </p>
+            <div class="contact-intents" role="group" aria-label="Message focus">
+              <button class="contact-intent" type="button" data-intent="Software engineering project">
+                Engineering
+              </button>
+              <button class="contact-intent" type="button" data-intent="Web development brief">
+                Web site
+              </button>
+              <button class="contact-intent" type="button" data-intent="Graphics / brand design">
+                Graphics
+              </button>
+              <button class="contact-intent" type="button" data-intent="Full-time or contract role">
+                Hiring
+              </button>
+              <button class="contact-intent" type="button" data-intent="Collaboration / other">
+                Other
+              </button>
+            </div>
+
+            <ul class="contact-aside__points">
+              <li>Clear scope beats a long pitch</li>
+              <li>Share timeline + budget if you have them</li>
+              <li>Links &amp; references welcome</li>
+            </ul>
+          </aside>
+
+          <form class="form form--contact" data-contact-form novalidate>
+            <div class="form__success" data-form-success hidden>
+              <p class="form__success-title">Message ready</p>
+              <p class="form__success-text">
+                Thanks — your draft looks good. Wire a mail endpoint next, or email me directly meanwhile.
+              </p>
+              <button class="btn btn--secondary" type="button" data-form-reset>Send another</button>
+            </div>
+
+            <div class="form__body" data-form-body>
+              <div class="form__row">
+                <div class="form__field form__field--float">
+                  <input
+                    class="form__control"
+                    id="name"
+                    name="name"
+                    type="text"
+                    autocomplete="name"
+                    placeholder=" "
+                    required
+                  />
+                  <label class="form__label" for="name">Your name</label>
+                </div>
+                <div class="form__field form__field--float">
+                  <input
+                    class="form__control"
+                    id="email"
+                    name="email"
+                    type="email"
+                    autocomplete="email"
+                    placeholder=" "
+                    required
+                  />
+                  <label class="form__label" for="email">Email</label>
+                </div>
+              </div>
+
+              <div class="form__field form__field--float">
+                <input
+                  class="form__control"
+                  id="subject"
+                  name="subject"
+                  type="text"
+                  placeholder=" "
+                  required
+                  data-subject
+                />
+                <label class="form__label" for="subject">Subject</label>
+              </div>
+
+              <div class="form__field form__field--float">
+                <textarea
+                  class="form__control form__control--textarea"
+                  id="message"
+                  name="message"
+                  placeholder=" "
+                  required
+                  maxlength="1200"
+                  data-message
+                ></textarea>
+                <label class="form__label" for="message">Tell me about the project</label>
+                <div class="form__meta">
+                  <span class="form__hint">Goals, timeline, links</span>
+                  <span class="form__count" data-char-count>0 / 1200</span>
+                </div>
+              </div>
+
+              <div class="form__actions">
+                <button class="btn btn--primary form__submit" type="submit" data-submit>
+                  <span data-submit-label>Send message</span>
+                  <svg width="18" height="18" aria-hidden="true" focusable="false">
+                    <use href="assets/icons/ui/sprite.svg#icon-arrow-right"></use>
+                  </svg>
+                </button>
+                <a class="btn btn--ghost" href="assets/cvs/Albart-Mwamalumbili-Resume.pdf" download>
+                  <svg width="18" height="18" aria-hidden="true" focusable="false">
+                    <use href="assets/icons/ui/sprite.svg#icon-download"></use>
+                  </svg>
+                  Resume
+                </a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-footer>
+      <div class="site-footer__cta">
+        <div class="site-footer__cta-inner">
+          <p class="site-footer__mark">AVM</p>
+          <div>
+            <p class="site-footer__cta-title">Have a brief in mind?</p>
+            <p class="site-footer__cta-text">Engineering, web, or graphics — let's talk.</p>
+          </div>
+          <a class="btn btn--primary" href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="site-footer__inner">
+        <div class="site-footer__brand-block">
+          <div class="site-footer__profile">
+            <img
+              class="site-footer__avatar"
+              src="assets/images/about/footer.jpg"
+              alt="Albart V Mwamalumbili"
+              width="96"
+              height="96"
+              loading="lazy"
+            />
+            <div>
+              <p class="site-footer__brand">Albart V Mwamalumbili</p>
+              <p class="site-footer__text">
+                Software Engineer, Web Developer, and Graphics Designer building systems people actually use.
+              </p>
+              <a class="site-footer__phone" href="tel:+255748952582">+255 748 952 582</a>
+
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="site-footer__heading">Explore</p>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="work.html">Works</a></li>
+            <li><a class="site-footer__link" href="about.html">About me</a></li>
+            <li><a class="site-footer__link" href="services.html">My services</a></li>
+            <li><a class="site-footer__link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="site-footer__heading">Connect</p>
+          <div class="site-footer__social">
+            <a class="site-footer__social-link" href="mailto:mwamalumbilialbart@gmail.com" aria-label="Email">
+              <svg width="18" height="18" aria-hidden="true" focusable="false">
+                <use href="assets/icons/ui/sprite.svg#icon-mail"></use>
+              </svg>
+            </a>
+            <a
+              class="site-footer__social-link"
+              href="https://www.linkedin.com/in/albart-mwamalumbili-b3b69b377/"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <svg width="18" height="18" aria-hidden="true" focusable="false">
+                <use href="assets/icons/ui/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+            <a
+              class="site-footer__social-link"
+              href="https://github.com/albert-victor"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <svg width="18" height="18" aria-hidden="true" focusable="false">
+                <use href="assets/icons/ui/sprite.svg#icon-github"></use>
+              </svg>
+            </a>
+            <a
+              class="site-footer__social-link"
+              href="https://www.instagram.com/_i_am_albertvictor/"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <svg width="18" height="18" aria-hidden="true" focusable="false">
+                <use href="assets/icons/ui/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-year></span> Albart V Mwamalumbili</p>
+        <a class="site-footer__top" href="#main">Back to top</a>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js?v=20260730"></script>
+  </body>
+</html>

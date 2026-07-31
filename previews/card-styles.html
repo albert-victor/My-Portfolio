@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Card style picker — AVM</title>
+    <link rel="stylesheet" href="../css/main.css?v=20260730" />
+    <link rel="stylesheet" href="card-styles.css" />
+  </head>
+  <body>
+    <div class="card-picker">
+      <div class="card-picker__inner">
+        <h1 class="card-picker__title">Pick a specialization card style</h1>
+        <p class="card-picker__lead">
+          Five options for the three home specializations. Reply with the letter you want
+          (A–E) and I’ll apply it on the live home page.
+        </p>
+
+        <nav class="card-picker__nav" aria-label="Jump to variants">
+          <a href="#a">A · Current</a>
+          <a href="#b">B · Split rail</a>
+          <a href="#c">C · Editorial</a>
+          <a href="#d">D · Soft panel</a>
+          <a href="#e">E · Media bands</a>
+          <a href="../index.html">← Back to site</a>
+        </nav>
+
+        <section class="variant" id="a">
+          <span class="variant__label">Option A</span>
+          <h2 class="variant__name">Current — image overlay</h2>
+          <p class="variant__desc">
+            What you have now: photo background, teal index, title, short line. Familiar but easy to look generic.
+          </p>
+          <div class="demo-stage">
+            <div class="v-a">
+              <a class="v-a__card" href="#">
+                <img src="../assets/images/specializations/engineering.jpg" alt="" />
+                <div class="v-a__body">
+                  <span class="v-a__index">01</span>
+                  <span class="v-a__title">Software Engineering</span>
+                  <span class="v-a__text">APIs, databases, and apps that solve real workflows.</span>
+                </div>
+              </a>
+              <a class="v-a__card" href="#">
+                <img src="../assets/images/specializations/web.jpg" alt="" />
+                <div class="v-a__body">
+                  <span class="v-a__index">02</span>
+                  <span class="v-a__title">Web Development</span>
+                  <span class="v-a__text">Tourism, health, and business sites that perform.</span>
+                </div>
+              </a>
+              <a class="v-a__card" href="#">
+                <img src="../assets/images/specializations/design.jpg" alt="" />
+                <div class="v-a__body">
+                  <span class="v-a__index">03</span>
+                  <span class="v-a__title">Graphic Design</span>
+                  <span class="v-a__text">Brand &amp; UI assets — Instagram portfolio.</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="variant" id="b">
+          <span class="variant__label">Option B · recommended</span>
+          <h2 class="variant__name">Split rail</h2>
+          <p class="variant__desc">
+            Narrow photo strip + readable text panel. Still visual, but less “stock template card.”
+          </p>
+          <div class="demo-stage">
+            <div class="v-b">
+              <a class="v-b__card" href="#">
+                <div class="v-b__media">
+                  <img src="../assets/images/specializations/engineering.jpg" alt="" />
+                </div>
+                <div class="v-b__body">
+                  <span class="v-b__index">01</span>
+                  <span class="v-b__title">Software Engineering</span>
+                  <span class="v-b__text">APIs, databases, and apps that solve real workflows.</span>
+                  <span class="v-b__cta">View works →</span>
+                </div>
+              </a>
+              <a class="v-b__card" href="#">
+                <div class="v-b__media">
+                  <img src="../assets/images/specializations/web.jpg" alt="" />
+                </div>
+                <div class="v-b__body">
+                  <span class="v-b__index">02</span>
+                  <span class="v-b__title">Web Development</span>
+                  <span class="v-b__text">Tourism, health, and business sites that perform.</span>
+                  <span class="v-b__cta">View works →</span>
+                </div>
+              </a>
+              <a class="v-b__card" href="#">
+                <div class="v-b__media">
+                  <img src="../assets/images/specializations/design.jpg" alt="" />
+                </div>
+                <div class="v-b__body">
+                  <span class="v-b__index">03</span>
+                  <span class="v-b__title">Graphic Design</span>
+                  <span class="v-b__text">Brand &amp; UI assets — Instagram portfolio.</span>
+                  <span class="v-b__cta">Instagram →</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="variant" id="c">
+          <span class="variant__label">Option C</span>
+          <h2 class="variant__name">Editorial rows</h2>
+          <p class="variant__desc">
+            No boxed cards — numbered list with hover accent. Cleanest, most “premium portfolio” feel.
+          </p>
+          <div class="demo-stage">
+            <div class="v-c">
+              <a class="v-c__card" href="#">
+                <span class="v-c__index">01</span>
+                <div>
+                  <div class="v-c__title">Software Engineering</div>
+                  <p class="v-c__text">APIs, databases, and apps that solve real workflows.</p>
+                </div>
+                <span class="v-c__cta">View →</span>
+              </a>
+              <a class="v-c__card" href="#">
+                <span class="v-c__index">02</span>
+                <div>
+                  <div class="v-c__title">Web Development</div>
+                  <p class="v-c__text">Tourism, health, and business sites that perform.</p>
+                </div>
+                <span class="v-c__cta">View →</span>
+              </a>
+              <a class="v-c__card" href="#">
+                <span class="v-c__index">03</span>
+                <div>
+                  <div class="v-c__title">Graphic Design</div>
+                  <p class="v-c__text">Brand &amp; UI assets — Instagram portfolio.</p>
+                </div>
+                <span class="v-c__cta">View →</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="variant" id="d">
+          <span class="variant__label">Option D</span>
+          <h2 class="variant__name">Soft panel + ghost number</h2>
+          <p class="variant__desc">
+            No stock photos — gradient border, oversized watermark number. Distinctive and typography-led.
+          </p>
+          <div class="demo-stage">
+            <div class="v-d">
+              <a class="v-d__card" href="#">
+                <span class="v-d__ghost" aria-hidden="true">01</span>
+                <div class="v-d__title">Software Engineering</div>
+                <p class="v-d__text">APIs, databases, and apps that solve real workflows.</p>
+                <span class="v-d__cta">View works →</span>
+              </a>
+              <a class="v-d__card" href="#">
+                <span class="v-d__ghost" aria-hidden="true">02</span>
+                <div class="v-d__title">Web Development</div>
+                <p class="v-d__text">Tourism, health, and business sites that perform.</p>
+                <span class="v-d__cta">View works →</span>
+              </a>
+              <a class="v-d__card" href="#">
+                <span class="v-d__ghost" aria-hidden="true">03</span>
+                <div class="v-d__title">Graphic Design</div>
+                <p class="v-d__text">Brand &amp; UI assets — Instagram portfolio.</p>
+                <span class="v-d__cta">Instagram →</span>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <section class="variant" id="e">
+          <span class="variant__label">Option E</span>
+          <h2 class="variant__name">Media bands</h2>
+          <p class="variant__desc">
+            Stacked horizontal bands with a circular photo crop. Strong rhythm, works well on mobile.
+          </p>
+          <div class="demo-stage">
+            <div class="v-e">
+              <a class="v-e__card" href="#">
+                <div class="v-e__media">
+                  <img src="../assets/images/specializations/engineering.jpg" alt="" />
+                </div>
+                <div class="v-e__body">
+                  <span class="v-e__index">01 · Engineering</span>
+                  <span class="v-e__title">Software Engineering</span>
+                  <span class="v-e__text">APIs, databases, and apps that solve real workflows.</span>
+                </div>
+              </a>
+              <a class="v-e__card" href="#">
+                <div class="v-e__media">
+                  <img src="../assets/images/specializations/web.jpg" alt="" />
+                </div>
+                <div class="v-e__body">
+                  <span class="v-e__index">02 · Web</span>
+                  <span class="v-e__title">Web Development</span>
+                  <span class="v-e__text">Tourism, health, and business sites that perform.</span>
+                </div>
+              </a>
+              <a class="v-e__card" href="#">
+                <div class="v-e__media">
+                  <img src="../assets/images/specializations/design.jpg" alt="" />
+                </div>
+                <div class="v-e__body">
+                  <span class="v-e__index">03 · Design</span>
+                  <span class="v-e__title">Graphic Design</span>
+                  <span class="v-e__text">Brand &amp; UI assets — Instagram portfolio.</span>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>

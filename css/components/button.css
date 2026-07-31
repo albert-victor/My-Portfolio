@@ -1,0 +1,90 @@
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  min-height: 2.75rem;
+  padding: var(--space-3) var(--space-5);
+  border-radius: var(--radius-md);
+  font-family: var(--font-body);
+  font-size: var(--text-small);
+  font-weight: var(--weight-medium);
+  line-height: 1;
+  text-align: center;
+  overflow: hidden;
+  isolation: isolate;
+  border: 1px solid transparent;
+  transition:
+    color 480ms var(--ease-out),
+    border-color 480ms var(--ease-out),
+    background-size 560ms var(--ease-out),
+    transform 320ms var(--ease-out);
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+/* Fill from below on hover */
+.btn--primary {
+  color: var(--color-on-accent);
+  border-color: var(--color-accent);
+  background-color: var(--color-accent);
+  background-image: linear-gradient(var(--color-accent-hover), var(--color-accent-hover));
+  background-repeat: no-repeat;
+  background-size: 100% 0%;
+  background-position: center bottom;
+}
+
+.btn--primary:hover {
+  color: var(--color-on-accent);
+  background-size: 100% 100%;
+}
+
+.btn--secondary {
+  color: var(--color-text);
+  border-color: var(--color-border);
+  background-color: transparent;
+  background-image: linear-gradient(var(--color-accent), var(--color-accent));
+  background-repeat: no-repeat;
+  background-size: 100% 0%;
+  background-position: center bottom;
+}
+
+.btn--secondary:hover {
+  color: var(--color-on-accent);
+  border-color: var(--color-accent);
+  background-size: 100% 100%;
+}
+
+.btn--ghost {
+  color: var(--color-text-muted);
+  background-color: transparent;
+  background-image: linear-gradient(var(--color-accent-subtle), var(--color-accent-subtle));
+  background-repeat: no-repeat;
+  background-size: 100% 0%;
+  background-position: center bottom;
+}
+
+.btn--ghost:hover {
+  color: var(--color-accent-hover);
+  background-size: 100% 100%;
+}
+
+.btn:disabled,
+.btn[aria-disabled="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn {
+    transition: color var(--duration-fast) var(--ease-out), border-color var(--duration-fast) var(--ease-out);
+  }
+
+  .btn:hover {
+    background-size: 100% 100%;
+  }
+}

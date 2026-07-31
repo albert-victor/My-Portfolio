@@ -1,0 +1,412 @@
+/**
+ * Preview-only styles for landing alternatives.
+ * Not imported into production main.css until you pick a direction.
+ */
+
+.preview-bar {
+  position: sticky;
+  top: 0;
+  z-index: 500;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.65rem 1rem;
+  background: #0a0c0e;
+  border-bottom: 1px solid var(--color-border);
+  font-size: 0.8rem;
+}
+
+.preview-bar__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.preview-bar a {
+  padding: 0.35rem 0.7rem;
+  border: 1px solid var(--color-border);
+  border-radius: 0.4rem;
+  color: var(--color-text-muted);
+}
+
+.preview-bar a.is-active,
+.preview-bar a:hover {
+  color: var(--color-text);
+  border-color: var(--color-accent);
+  background: var(--color-accent-subtle);
+}
+
+.preview-note {
+  color: var(--color-text-muted);
+}
+
+/* ——— Shared landing shell: one viewport ——— */
+.landing {
+  min-height: calc(100dvh - 2.75rem);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing__bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.landing__inner {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  width: var(--container);
+  margin-inline: auto;
+  padding-block: 1.5rem 1.75rem;
+}
+
+.landing__identity {
+  max-width: 40rem;
+}
+
+.landing__kicker {
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.landing__name {
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5.5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.02;
+  letter-spacing: -0.03em;
+  margin-bottom: 0.85rem;
+}
+
+.landing__lead {
+  max-width: 38ch;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+  font-size: 1.05rem;
+}
+
+.landing__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+/* Specialization cards */
+.spec-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.85rem;
+}
+
+.spec-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  padding: 1.1rem 1.15rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: rgba(28, 35, 41, 0.72);
+  color: inherit;
+  transition:
+    border-color 160ms var(--ease-out),
+    transform 160ms var(--ease-out),
+    background-color 160ms var(--ease-out);
+}
+
+.spec-card:hover {
+  border-color: var(--color-accent);
+  background: rgba(28, 35, 41, 0.95);
+  transform: translateY(-2px);
+  color: inherit;
+}
+
+.spec-card__index {
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.spec-card__title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.spec-card__text {
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 48rem) {
+  .landing {
+    min-height: auto;
+    overflow: visible;
+  }
+
+  .spec-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ——— ALT A: Split identity + cards docked bottom ——— */
+.alt-a .landing__bg {
+  background:
+    radial-gradient(ellipse 70% 55% at 85% 15%, rgba(46, 196, 182, 0.16), transparent 55%),
+    radial-gradient(ellipse 50% 40% at 10% 90%, rgba(46, 196, 182, 0.06), transparent 50%),
+    linear-gradient(160deg, #12171c 0%, #0e1114 45%, #0b0e11 100%);
+}
+
+.alt-a .landing__inner {
+  justify-content: flex-end;
+  padding-bottom: 2rem;
+  gap: 2rem;
+}
+
+.alt-a .landing__name span {
+  display: block;
+  color: var(--color-text-muted);
+  font-size: 0.42em;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  margin-top: 0.35rem;
+}
+
+/* ——— ALT B: Centered identity, cards under ——— */
+.alt-b .landing__bg {
+  background:
+    linear-gradient(180deg, rgba(14, 17, 20, 0.2), #0e1114 70%),
+    radial-gradient(circle at 50% 0%, rgba(46, 196, 182, 0.18), transparent 42%),
+    #0e1114;
+}
+
+.alt-b .landing__inner {
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.alt-b .landing__identity {
+  max-width: 44rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.alt-b .landing__lead {
+  max-width: 42ch;
+}
+
+.alt-b .landing__actions {
+  justify-content: center;
+}
+
+.alt-b .spec-grid {
+  width: 100%;
+  text-align: left;
+}
+
+.alt-b .spec-card {
+  background: var(--color-bg-elevated);
+}
+
+/* ——— ALT C: Side portrait plane + compact cards ——— */
+.alt-c .landing {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  min-height: calc(100dvh - 2.75rem);
+}
+
+.alt-c .landing__bg {
+  display: none;
+}
+
+.alt-c .landing__visual {
+  position: relative;
+  min-height: 100%;
+  background:
+    linear-gradient(135deg, rgba(14, 17, 20, 0.25), rgba(14, 17, 20, 0.85)),
+    linear-gradient(160deg, #1a242c, #0e1114 60%, #162028);
+  overflow: hidden;
+}
+
+.alt-c .landing__visual::after {
+  content: "AVM";
+  position: absolute;
+  right: -4%;
+  bottom: -8%;
+  font-family: var(--font-display);
+  font-size: clamp(8rem, 22vw, 16rem);
+  font-weight: 700;
+  line-height: 0.8;
+  letter-spacing: -0.06em;
+  color: rgba(232, 238, 242, 0.04);
+  pointer-events: none;
+}
+
+.alt-c .landing__visual-caption {
+  position: absolute;
+  left: 1.5rem;
+  bottom: 1.5rem;
+  max-width: 16rem;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.alt-c .landing__panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.25rem;
+  padding: 1.75rem 1.5rem 1.5rem;
+  background: var(--color-bg);
+}
+
+.alt-c .spec-grid {
+  grid-template-columns: 1fr;
+  gap: 0.65rem;
+}
+
+.alt-c .spec-card {
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 0.9rem;
+  padding: 0.9rem 1rem;
+}
+
+.alt-c .spec-card__index {
+  flex: 0 0 auto;
+  margin-top: 0.15rem;
+}
+
+@media (max-width: 62rem) {
+  .alt-c .landing {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .alt-c .landing__visual {
+    min-height: 38vh;
+  }
+}
+
+/* ——— ALT D: No-card editorial strips (anti-card option) ——— */
+.alt-d .landing__bg {
+  background:
+    linear-gradient(90deg, transparent 64%, rgba(46, 196, 182, 0.05)),
+    #0e1114;
+}
+
+.alt-d .spec-grid {
+  gap: 0;
+}
+
+.alt-d .spec-card {
+  border: none;
+  border-top: 1px solid var(--color-border);
+  border-radius: 0;
+  background: transparent;
+  padding: 1rem 0.25rem;
+}
+
+.alt-d .spec-card:last-child {
+  border-bottom: 1px solid var(--color-border);
+}
+
+.alt-d .spec-card:hover {
+  transform: none;
+  background: transparent;
+  border-color: var(--color-border);
+}
+
+.alt-d .spec-card:hover .spec-card__title {
+  color: var(--color-accent-hover);
+}
+
+/* Hub */
+.hub {
+  min-height: 100dvh;
+  padding: 3rem 1.25rem;
+  background:
+    radial-gradient(ellipse at top, rgba(46, 196, 182, 0.12), transparent 45%),
+    var(--color-bg);
+}
+
+.hub__inner {
+  width: min(56rem, 100%);
+  margin-inline: auto;
+}
+
+.hub__title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 4vw, 3rem);
+  margin-bottom: 0.75rem;
+}
+
+.hub__lead {
+  color: var(--color-text-muted);
+  max-width: 50ch;
+  margin-bottom: 2rem;
+}
+
+.hub-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.hub-card {
+  display: block;
+  padding: 1.35rem 1.4rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+  color: inherit;
+  transition: border-color 160ms var(--ease-out);
+}
+
+.hub-card:hover {
+  border-color: var(--color-accent);
+  color: inherit;
+}
+
+.hub-card h2 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.hub-card p {
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+}
+
+.hub-card__tag {
+  display: inline-block;
+  margin-bottom: 0.65rem;
+  font-size: 0.7rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+@media (max-width: 48rem) {
+  .hub-grid {
+    grid-template-columns: 1fr;
+  }
+}

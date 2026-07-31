@@ -1,0 +1,713 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Albart V Mwamalumbili – Software Engineer, Web Developer, and Graphics Designer. Premium personal brand portfolio."
+    />
+    <title>AVM – Albart V Mwamalumbili</title>
+    <link rel="stylesheet" href="css/main.css?v=20260730" />
+  </head>
+  <body class="page page--home">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <script>
+      (() => {
+        try {
+          if (localStorage.getItem("avm-theme") === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        } catch (_) {}
+      })();
+    </script>
+
+    <header class="site-header" data-header>
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="index.html" aria-label="AVM home">AVM</a>
+
+        <nav class="site-nav" data-nav aria-label="Primary">
+          <button
+            class="site-nav__toggle"
+            type="button"
+            data-nav-toggle
+            aria-expanded="false"
+            aria-controls="primary-nav"
+          >
+            <span class="u-sr-only">Menu</span>
+            <svg class="site-nav__toggle-icon" width="24" height="24" aria-hidden="true" focusable="false">
+              <use href="assets/icons/ui/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+
+          <div class="site-nav__backdrop" data-nav-backdrop></div>
+
+          <ul class="site-nav__list" id="primary-nav">
+            <li><a class="site-nav__link" data-nav-link href="index.html">Home</a></li>
+            <li class="site-nav__item" data-works-menu>
+              <button
+                class="site-nav__link"
+                type="button"
+                data-works-trigger
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="works-mega"
+              >
+                Works
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="works-mega" id="works-mega">
+                <div class="works-mega__grid">
+                  <a class="works-mega__card" data-works-link href="work/engineering.html">
+                    <span class="works-mega__eyebrow">Software</span>
+                    <span class="works-mega__title">Engineering</span>
+                    <span class="works-mega__text">AI/ML, systems &amp; tools</span>
+                  </a>
+                  <a class="works-mega__card" data-works-link href="work/web.html">
+                    <span class="works-mega__eyebrow">Web</span>
+                    <span class="works-mega__title">Development</span>
+                    <span class="works-mega__text">Live sites &amp; product fronts</span>
+                  </a>
+                  <a class="works-mega__card" data-works-link href="work/graphics.html">
+                    <span class="works-mega__eyebrow">Graphics</span>
+                    <span class="works-mega__title">Design</span>
+                    <span class="works-mega__text">Social, church &amp; print</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li><a class="site-nav__link" data-nav-link href="about.html">About me</a></li>
+            <li><a class="site-nav__link" data-nav-link href="services.html">My services</a></li>
+            <li><a class="site-nav__link" data-nav-link href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="site-header__actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" title="Switch theme">
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" aria-hidden="true" focusable="false">
+              <use href="assets/icons/ui/sprite.svg#icon-sun"></use>
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" aria-hidden="true" focusable="false">
+              <use href="assets/icons/ui/sprite.svg#icon-moon"></use>
+            </svg>
+          </button>
+
+          <div class="resume-menu" data-resume-menu>
+            <button
+              class="btn btn--secondary resume-menu__trigger"
+              type="button"
+              data-resume-trigger
+              aria-expanded="false"
+              aria-haspopup="true"
+            >
+              Resume
+            </button>
+            <div class="resume-menu__panel" data-resume-panel role="menu" aria-label="Choose a resume">
+              <span class="resume-menu__label">Download by focus</span>
+              <a
+                class="resume-menu__item"
+                role="menuitem"
+                href="assets/cvs/resume-software-engineering.pdf"
+                download
+              >
+                <strong>Software Engineering</strong>
+                <span>Systems, APIs &amp; full-stack</span>
+              </a>
+              <a class="resume-menu__item" role="menuitem" href="assets/cvs/resume-web-designer.pdf" download>
+                <strong>Web Designer</strong>
+                <span>Sites, UX &amp; front-end</span>
+              </a>
+              <a
+                class="resume-menu__item"
+                role="menuitem"
+                href="assets/cvs/resume-graphics-designer.pdf"
+                download
+              >
+                <strong>Graphics Designer</strong>
+                <span>Brand &amp; visual identity</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="page__main">
+      <section class="hero" aria-labelledby="hero-name">
+        <div class="hero__media" aria-hidden="true"></div>
+        <div class="hero__content">
+          <div class="hero__identity">
+            <p class="hero__roles">Software Engineer · Web Developer · Graphics Designer</p>
+            <h1 class="hero__name" id="hero-name"><span class="hero__name-accent">Albart V Mwamalumbili</span></h1>
+            <p class="hero__lead">
+              Systems, websites, and brand visuals for education, health, tourism, and business.
+            </p>
+            <div class="hero__actions">
+              <a class="btn btn--primary" href="work/engineering.html">View my works</a>
+              <a class="btn btn--secondary" href="contact.html">Hire me</a>
+            </div>
+          </div>
+
+          <div class="spec-cards" role="list">
+            <a
+              class="spec-card"
+              href="work/engineering.html"
+              role="listitem"
+              aria-label="Software Engineering – GitHub projects and story"
+            >
+              <div class="spec-card__media">
+                <img
+                  src="assets/images/specializations/engineering.jpg"
+                  alt="Laptop screen showing real application code"
+                  width="960"
+                  height="640"
+                  loading="eager"
+                />
+                <span class="spec-card__badge">01 – Engineering</span>
+              </div>
+              <div class="spec-card__body">
+                <h2 class="spec-card__title">Software Engineering</h2>
+                <p class="spec-card__text">
+                  Systems and AI/ML – Mr. Muungano, Fikra2050, Study Tracker, AMCOS, MediBook.
+                </p>
+                <ul class="spec-card__meta" aria-label="Focus areas">
+                  <li>PHP / APIs</li>
+                  <li>AI / ML</li>
+                  <li>Systems</li>
+                </ul>
+                <span class="spec-card__cta">
+                  Open engineering work
+                  <svg width="16" height="16" aria-hidden="true" focusable="false">
+                    <use href="assets/icons/ui/sprite.svg#icon-arrow-right"></use>
+                  </svg>
+                </span>
+              </div>
+            </a>
+
+            <a
+              class="spec-card"
+              href="work/web.html"
+              role="listitem"
+              aria-label="Web Development – websites and product UI"
+            >
+              <div class="spec-card__media">
+                <img
+                  src="assets/images/specializations/web.jpg"
+                  alt="Analytics dashboard on a laptop representing web product work"
+                  width="960"
+                  height="640"
+                  loading="eager"
+                />
+                <span class="spec-card__badge">02 – Web</span>
+              </div>
+              <div class="spec-card__body">
+                <h2 class="spec-card__title">Web Development</h2>
+                <p class="spec-card__text">
+                  WildGaze, Safaris &amp; Bush Retreats, ER Tours, and Bamboo Village.
+                </p>
+                <ul class="spec-card__meta" aria-label="Focus areas">
+                  <li>HTML / CSS</li>
+                  <li>JavaScript</li>
+                  <li>Tourism</li>
+                </ul>
+                <span class="spec-card__cta">
+                  Open web work
+                  <svg width="16" height="16" aria-hidden="true" focusable="false">
+                    <use href="assets/icons/ui/sprite.svg#icon-arrow-right"></use>
+                  </svg>
+                </span>
+              </div>
+            </a>
+
+            <a
+              class="spec-card"
+              href="work/graphics.html"
+              role="listitem"
+              aria-label="Graphics Design – brand and visual portfolio"
+            >
+              <div class="spec-card__media">
+                <img
+                  src="assets/images/specializations/design.jpg"
+                  alt="Printed design and branding materials on a studio desk"
+                  width="960"
+                  height="640"
+                  loading="eager"
+                />
+                <span class="spec-card__badge">03 – Graphics</span>
+              </div>
+              <div class="spec-card__body">
+                <h2 class="spec-card__title">Graphics Design</h2>
+                <p class="spec-card__text">
+                  Social media designs, church flyers, and print campaigns.
+                </p>
+                <ul class="spec-card__meta" aria-label="Focus areas">
+                  <li>Social</li>
+                  <li>Print</li>
+                  <li>Brand</li>
+                </ul>
+                <span class="spec-card__cta">
+                  Open graphics work
+                  <svg width="16" height="16" aria-hidden="true" focusable="false">
+                    <use href="assets/icons/ui/sprite.svg#icon-arrow-right"></use>
+                  </svg>
+                </span>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="testimonials" aria-labelledby="testimonials-title">
+        <div class="testimonials__intro container">
+          <p class="testimonials__eyebrow">Testimonials</p>
+          <h2 class="testimonials__title" id="testimonials-title">What collaborators say</h2>
+        </div>
+        <div class="testimonials__marquee" aria-label="Scrolling testimonials">
+          <div class="testimonials__track">
+            <figure class="testimonials__card">
+              <blockquote class="testimonials__quote">
+                “Clear communication and reliable delivery on the web experience – the site matched how we sell safaris.”
+              </blockquote>
+              <figcaption class="testimonials__person">
+                <span class="testimonials__name">ER Tour &amp; Safaris</span>
+                <span class="testimonials__role">Tourism web project</span>
+              </figcaption>
+            </figure>
+            <figure class="testimonials__card">
+              <blockquote class="testimonials__quote">
+                “Practical systems thinking – from APIs to the UI – without unnecessary complexity.”
+              </blockquote>
+              <figcaption class="testimonials__person">
+                <span class="testimonials__name">Project collaborator</span>
+                <span class="testimonials__role">Full-stack delivery</span>
+              </figcaption>
+            </figure>
+            <figure class="testimonials__card">
+              <blockquote class="testimonials__quote">
+                “Strong visual sense for brand assets that still work inside a real product interface.”
+              </blockquote>
+              <figcaption class="testimonials__person">
+                <span class="testimonials__name">Graphics client</span>
+                <span class="testimonials__role">Brand &amp; UI assets</span>
+              </figcaption>
+            </figure>
+            <figure class="testimonials__card">
+              <blockquote class="testimonials__quote">
+                “Shows ownership end-to-end – problem, build, and handoff – the way institutional ICT work needs.”
+              </blockquote>
+              <figcaption class="testimonials__person">
+                <span class="testimonials__name">Field placement feedback</span>
+                <span class="testimonials__role">ICT systems support</span>
+              </figcaption>
+            </figure>
+            <!-- duplicate set for seamless loop -->
+            <figure class="testimonials__card" aria-hidden="true">
+              <blockquote class="testimonials__quote">
+                “Clear communication and reliable delivery on the web experience – the site matched how we sell safaris.”
+              </blockquote>
+              <figcaption class="testimonials__person">
+                <span class="testimonials__name">ER Tour &amp; Safaris</span>
+                <span class="testimonials__role">Tourism web project</span>
+              </figcaption>
+            </figure>
+            <figure class="testimonials__card" aria-hidden="true">
+              <blockquote class="testimonials__quote">
+                “Practical systems thinking – from APIs to the UI – without unnecessary complexity.”
+              </blockquote>
+              <figcaption class="testimonials__person">
+                <span class="testimonials__name">Project collaborator</span>
+                <span class="testimonials__role">Full-stack delivery</span>
+              </figcaption>
+            </figure>
+            <figure class="testimonials__card" aria-hidden="true">
+              <blockquote class="testimonials__quote">
+                “Strong visual sense for brand assets that still work inside a real product interface.”
+              </blockquote>
+              <figcaption class="testimonials__person">
+                <span class="testimonials__name">Graphics client</span>
+                <span class="testimonials__role">Brand &amp; UI assets</span>
+              </figcaption>
+            </figure>
+            <figure class="testimonials__card" aria-hidden="true">
+              <blockquote class="testimonials__quote">
+                “Shows ownership end-to-end – problem, build, and handoff – the way institutional ICT work needs.”
+              </blockquote>
+              <figcaption class="testimonials__person">
+                <span class="testimonials__name">Field placement feedback</span>
+                <span class="testimonials__role">ICT systems support</span>
+              </figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="clients" aria-labelledby="clients-title">
+        <div class="clients__intro container">
+          <p class="clients__eyebrow">Collaborations</p>
+          <h2 class="clients__title" id="clients-title">Organizations I have worked with</h2>
+          <p class="clients__lead">Institutions and brands across education, health, tourism, and business.</p>
+        </div>
+        <div class="clients__marquee" data-clients-marquee>
+          <div class="clients__track">
+            <ul class="clients__list">
+              <li class="clients__item">
+                <img src="assets/clients/muhas.png" alt="MUHAS" width="160" height="80" loading="lazy" />
+                <span class="clients__name">MUHAS</span>
+              </li>
+              <li class="clients__item">
+                <img
+                  src="assets/clients/safaris-bush-retreats.png"
+                  alt="Safaris &amp; Bush Retreats"
+                  width="160"
+                  height="80"
+                  loading="lazy"
+                />
+                <span class="clients__name">Safaris &amp; Bush Retreats</span>
+              </li>
+              <li class="clients__item">
+                <img
+                  src="assets/clients/wildgaze-safaris.png"
+                  alt="Wild Gaze Safaris"
+                  width="160"
+                  height="80"
+                  loading="lazy"
+                />
+                <span class="clients__name">Wild Gaze Safaris</span>
+              </li>
+              <li class="clients__item">
+                <img
+                  src="assets/clients/er-safaris.png"
+                  alt="ER Tour &amp; Safaris"
+                  width="160"
+                  height="80"
+                  loading="lazy"
+                />
+                <span class="clients__name">ER Tour &amp; Safaris</span>
+              </li>
+              <li class="clients__item">
+                <img src="assets/clients/rucu.png" alt="RUCU" width="160" height="80" loading="lazy" />
+                <span class="clients__name">RUCU</span>
+              </li>
+              <li class="clients__item">
+                <img src="assets/clients/nmb.png" alt="NMB" width="160" height="80" loading="lazy" />
+                <span class="clients__name">NMB</span>
+              </li>
+              <li class="clients__item">
+                <img
+                  src="assets/clients/igeleke-bamboo.jpg"
+                  alt="Igeleke Bamboo Village"
+                  width="160"
+                  height="80"
+                  loading="lazy"
+                />
+                <span class="clients__name">Igeleke Bamboo Village</span>
+              </li>
+              <li class="clients__item">
+                <img
+                  src="assets/clients/najali-pad.jpg"
+                  alt="NAJALI Pad"
+                  width="160"
+                  height="80"
+                  loading="lazy"
+                />
+                <span class="clients__name">NAJALI Pad</span>
+              </li>
+            </ul>
+            <ul class="clients__list" aria-hidden="true">
+              <li class="clients__item">
+                <img src="assets/clients/muhas.png" alt="" width="160" height="80" loading="lazy" />
+                <span class="clients__name">MUHAS</span>
+              </li>
+              <li class="clients__item">
+                <img src="assets/clients/safaris-bush-retreats.png" alt="" width="160" height="80" loading="lazy" />
+                <span class="clients__name">Safaris &amp; Bush Retreats</span>
+              </li>
+              <li class="clients__item">
+                <img src="assets/clients/wildgaze-safaris.png" alt="" width="160" height="80" loading="lazy" />
+                <span class="clients__name">Wild Gaze Safaris</span>
+              </li>
+              <li class="clients__item">
+                <img src="assets/clients/er-safaris.png" alt="" width="160" height="80" loading="lazy" />
+                <span class="clients__name">ER Tour &amp; Safaris</span>
+              </li>
+              <li class="clients__item">
+                <img src="assets/clients/rucu.png" alt="" width="160" height="80" loading="lazy" />
+                <span class="clients__name">RUCU</span>
+              </li>
+              <li class="clients__item">
+                <img src="assets/clients/nmb.png" alt="" width="160" height="80" loading="lazy" />
+                <span class="clients__name">NMB</span>
+              </li>
+              <li class="clients__item">
+                <img src="assets/clients/igeleke-bamboo.jpg" alt="" width="160" height="80" loading="lazy" />
+                <span class="clients__name">Igeleke Bamboo Village</span>
+              </li>
+              <li class="clients__item">
+                <img src="assets/clients/najali-pad.jpg" alt="" width="160" height="80" loading="lazy" />
+                <span class="clients__name">NAJALI Pad</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="selected-work-title">
+        <div class="container">
+          <header class="section-header">
+            <span class="section-header__eyebrow">Selected work</span>
+            <h2 class="section-header__title" id="selected-work-title">Proof over promises</h2>
+            <p class="section-header__lead">
+              Real projects from GitHub and the graphics gallery.
+            </p>
+          </header>
+
+          <div class="grid grid--3">
+            <a
+              class="project-teaser"
+              href="https://github.com/albert-victor/Mr_Muungano"
+              data-discipline="engineering"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div class="project-teaser__media">
+                <img
+                  src="assets/images/projects/covers/mr-muungano.jpg"
+                  alt="Mr. Muungano AI assistant preview"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-teaser__body">
+                <div class="tag-list">
+                  <span class="tag">AI / ML</span>
+                </div>
+                <h3 class="project-teaser__title">Mr. Muungano</h3>
+                <p class="project-teaser__meta">2026 · RAG assistant · Union knowledge</p>
+              </div>
+            </a>
+
+            <a
+              class="project-teaser"
+              href="https://github.com/albert-victor/WildGaze-safaris"
+              data-discipline="web design"
+              rel="noopener noreferrer"
+              target="_blank"
+            >
+              <div class="project-teaser__media">
+                <img
+                  src="assets/images/projects/covers/wildgaze.jpg"
+                  alt="WildGaze Safaris website preview"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-teaser__body">
+                <div class="tag-list">
+                  <span class="tag">Web</span>
+                </div>
+                <h3 class="project-teaser__title">WildGaze Safaris</h3>
+                <p class="project-teaser__meta">2025 · Southern circuits · Tanzania</p>
+              </div>
+            </a>
+
+            <a
+              class="project-teaser"
+              href="work/graphics.html"
+              data-discipline="design"
+            >
+              <div class="project-teaser__media">
+                <img
+                  src="assets/images/projects/covers/graphics.jpg"
+                  alt="Graphics and social media design preview"
+                  width="800"
+                  height="500"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-teaser__body">
+                <div class="tag-list">
+                  <span class="tag">Graphics</span>
+                </div>
+                <h3 class="project-teaser__title">Social Media Designs</h3>
+                <p class="project-teaser__meta">Ongoing · Covers, campaigns &amp; print</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="cluster u-mt-5">
+            <a class="btn btn--ghost" href="work.html">View my works</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="stack-title">
+        <div class="container">
+          <header class="section-header">
+            <span class="section-header__eyebrow">Capabilities</span>
+            <h2 class="section-header__title" id="stack-title">Tools I ship with</h2>
+            <p class="section-header__lead">
+              The stack I use on real client and institutional work – each tool for a clear job.
+            </p>
+          </header>
+
+          <div class="stack-grid">
+            <article class="stack-item" data-mark="01">
+              <h3 class="stack-item__title">Python &amp; Django</h3>
+              <p class="stack-item__text">
+                Backend logic and structured web apps when the product needs clear models and admin workflows.
+              </p>
+            </article>
+            <article class="stack-item" data-mark="02">
+              <h3 class="stack-item__title">PHP &amp; Laravel</h3>
+              <p class="stack-item__text">
+                Fast APIs and full-stack systems – including vanilla PHP APIs with token auth when lean is better.
+              </p>
+            </article>
+            <article class="stack-item" data-mark="03">
+              <h3 class="stack-item__title">JavaScript, React &amp; Vue</h3>
+              <p class="stack-item__text">
+                Interactive front ends for dashboards, forms, and product UI that stay responsive and clear.
+              </p>
+            </article>
+            <article class="stack-item" data-mark="04">
+              <h3 class="stack-item__title">MySQL &amp; PostgreSQL</h3>
+              <p class="stack-item__text">
+                Reliable data design for education, health, and cooperative systems that must stay consistent.
+              </p>
+            </article>
+            <article class="stack-item" data-mark="05">
+              <h3 class="stack-item__title">HTML / CSS craft</h3>
+              <p class="stack-item__text">
+                Handcrafted layouts, accessibility, and performance – no framework dependency for marketing sites.
+              </p>
+            </article>
+            <article class="stack-item" data-mark="06">
+              <h3 class="stack-item__title">Photoshop &amp; Illustrator</h3>
+              <p class="stack-item__text">
+                Brand marks, posters, and UI assets that match the product – with Canva for fast client iterations.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" aria-labelledby="about-teaser-title">
+        <div class="container">
+          <header class="section-header">
+            <span class="section-header__eyebrow">About</span>
+            <h2 class="section-header__title" id="about-teaser-title">Built around real problems</h2>
+            <p class="section-header__lead">
+              BSc Computer Science &amp; Software Engineering at RUCU, with ICT field training at MUHAS and TTCL – plus freelance systems and brand work.
+            </p>
+          </header>
+          <a class="btn btn--secondary" href="about.html">More about me</a>
+        </div>
+      </section>
+
+      <section class="cta-band" aria-labelledby="cta-title">
+        <div class="cta-band__inner">
+          <div>
+            <h2 class="cta-band__title" id="cta-title">Let’s build something sharp</h2>
+            <p class="cta-band__text">Available for roles, freelance, and select collaborations.</p>
+          </div>
+          <a class="btn btn--primary" href="contact.html">Start a conversation</a>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-footer>
+      <div class="site-footer__cta">
+        <div class="site-footer__cta-inner">
+          <p class="site-footer__mark">AVM</p>
+          <div>
+            <p class="site-footer__cta-title">Have a brief in mind?</p>
+            <p class="site-footer__cta-text">Engineering, web, or graphics – let’s talk.</p>
+          </div>
+          <a class="btn btn--primary" href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="site-footer__inner">
+        <div class="site-footer__brand-block">
+          <div class="site-footer__profile">
+            <img
+              class="site-footer__avatar"
+              src="assets/images/about/footer.jpg"
+              alt="Albart V Mwamalumbili"
+              width="96"
+              height="96"
+              loading="lazy"
+            />
+            <div>
+              <p class="site-footer__brand">Albart V Mwamalumbili</p>
+              <p class="site-footer__text">
+                Software Engineer, Web Developer, and Graphics Designer building systems people actually use.
+              </p>
+              <a class="site-footer__phone" href="tel:+255748952582">+255 748 952 582</a>
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="site-footer__heading">Explore</p>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="work.html">Works</a></li>
+            <li><a class="site-footer__link" href="about.html">About me</a></li>
+            <li><a class="site-footer__link" href="services.html">My services</a></li>
+            <li><a class="site-footer__link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="site-footer__heading">Connect</p>
+          <div class="site-footer__social">
+            <a class="site-footer__social-link" href="mailto:mwamalumbilialbart@gmail.com" aria-label="Email">
+              <svg width="18" height="18" aria-hidden="true" focusable="false">
+                <use href="assets/icons/ui/sprite.svg#icon-mail"></use>
+              </svg>
+            </a>
+            <a
+              class="site-footer__social-link"
+              href="https://www.linkedin.com/in/albart-mwamalumbili-b3b69b377/"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <svg width="18" height="18" aria-hidden="true" focusable="false">
+                <use href="assets/icons/ui/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+            <a
+              class="site-footer__social-link"
+              href="https://github.com/albert-victor"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <svg width="18" height="18" aria-hidden="true" focusable="false">
+                <use href="assets/icons/ui/sprite.svg#icon-github"></use>
+              </svg>
+            </a>
+            <a
+              class="site-footer__social-link"
+              href="https://www.instagram.com/_i_am_albertvictor/"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <svg width="18" height="18" aria-hidden="true" focusable="false">
+                <use href="assets/icons/ui/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-year></span> Albart V Mwamalumbili</p>
+        <a class="site-footer__top" href="#main">Back to top</a>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js?v=20260730"></script>
+  </body>
+</html>

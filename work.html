@@ -1,0 +1,193 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Selected software engineering, AI/ML, web development, and graphic design work by Albart V Mwamalumbili." />
+    <title>Work – Albart V Mwamalumbili</title>
+    <link rel="stylesheet" href="css/main.css?v=20260730" />
+  </head>
+  <body class="page page--work">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <script>
+      (() => {
+        try {
+          if (localStorage.getItem("avm-theme") === "dark") {
+            document.documentElement.setAttribute("data-theme", "dark");
+          }
+        } catch (_) {}
+      })();
+    </script>
+
+    <header class="site-header" data-header>
+      <div class="site-header__inner">
+        <a class="site-header__brand" href="index.html" aria-label="AVM home">AVM</a>
+        <nav class="site-nav" data-nav aria-label="Primary">
+          <button class="site-nav__toggle" type="button" data-nav-toggle aria-expanded="false" aria-controls="primary-nav">
+            <span class="u-sr-only">Menu</span>
+            <svg class="site-nav__toggle-icon" width="24" height="24" aria-hidden="true" focusable="false">
+              <use href="assets/icons/ui/sprite.svg#icon-menu"></use>
+            </svg>
+          </button>
+          <div class="site-nav__backdrop" data-nav-backdrop></div>
+          <ul class="site-nav__list" id="primary-nav">
+            <li><a class="site-nav__link" data-nav-link href="index.html">Home</a></li>
+            <li class="site-nav__item" data-works-menu>
+              <button
+                class="site-nav__link"
+                type="button"
+                data-works-trigger
+                aria-expanded="false"
+                aria-haspopup="true"
+                aria-controls="works-mega"
+              >
+                Works
+                <span class="site-nav__caret" aria-hidden="true"></span>
+              </button>
+              <div class="works-mega" id="works-mega">
+                <div class="works-mega__grid">
+                  <a class="works-mega__card" data-works-link href="work/engineering.html">
+                    <span class="works-mega__eyebrow">Software</span>
+                    <span class="works-mega__title">Engineering</span>
+                    <span class="works-mega__text">AI/ML, systems &amp; tools</span>
+                  </a>
+                  <a class="works-mega__card" data-works-link href="work/web.html">
+                    <span class="works-mega__eyebrow">Web</span>
+                    <span class="works-mega__title">Development</span>
+                    <span class="works-mega__text">Live sites &amp; product fronts</span>
+                  </a>
+                  <a class="works-mega__card" data-works-link href="work/graphics.html">
+                    <span class="works-mega__eyebrow">Graphics</span>
+                    <span class="works-mega__title">Design</span>
+                    <span class="works-mega__text">Social, church &amp; print</span>
+                  </a>
+                </div>
+              </div>
+            </li>
+            <li><a class="site-nav__link" data-nav-link href="about.html">About me</a></li>
+            <li><a class="site-nav__link" data-nav-link href="services.html">My services</a></li>
+            <li><a class="site-nav__link" data-nav-link href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="site-header__actions">
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch to dark theme" title="Switch theme">
+            <svg class="theme-toggle__icon theme-toggle__icon--sun" width="20" height="20" aria-hidden="true" focusable="false">
+              <use href="assets/icons/ui/sprite.svg#icon-sun"></use>
+            </svg>
+            <svg class="theme-toggle__icon theme-toggle__icon--moon" width="20" height="20" aria-hidden="true" focusable="false">
+              <use href="assets/icons/ui/sprite.svg#icon-moon"></use>
+            </svg>
+          </button>
+          <div class="resume-menu" data-resume-menu>
+            <button class="btn btn--secondary resume-menu__trigger" type="button" data-resume-trigger aria-expanded="false" aria-haspopup="true">Resume</button>
+            <div class="resume-menu__panel" data-resume-panel role="menu" aria-label="Choose a resume">
+              <span class="resume-menu__label">Download by focus</span>
+              <a class="resume-menu__item" role="menuitem" href="assets/cvs/resume-software-engineering.pdf" download>
+                <strong>Software Engineering</strong><span>Systems, APIs &amp; full-stack</span>
+              </a>
+              <a class="resume-menu__item" role="menuitem" href="assets/cvs/resume-web-designer.pdf" download>
+                <strong>Web Designer</strong><span>Sites, UX &amp; front-end</span>
+              </a>
+              <a class="resume-menu__item" role="menuitem" href="assets/cvs/resume-graphics-designer.pdf" download>
+                <strong>Graphics Designer</strong><span>Brand &amp; visual identity</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main id="main" class="page__main">
+      <section class="section" aria-labelledby="work-title">
+        <div class="container work-shell">
+          <header class="section-header" data-reveal>
+            <span class="section-header__eyebrow">Works</span>
+            <h1 class="section-header__title" id="work-title">Choose a category</h1>
+            <p class="section-header__lead">
+              Open the discipline you want to explore – the same paths as the Works menu.
+            </p>
+          </header>
+
+          <div class="work-hubs" data-reveal>
+            <a class="work-hub-card" href="work/engineering.html">
+              <span class="work-hub-card__eyebrow">Software</span>
+              <h2 class="work-hub-card__title">Engineering</h2>
+              <p class="work-hub-card__text">AI/ML, systems, APIs, and tools on GitHub.</p>
+            </a>
+            <a class="work-hub-card" href="work/web.html">
+              <span class="work-hub-card__eyebrow">Web</span>
+              <h2 class="work-hub-card__title">Development</h2>
+              <p class="work-hub-card__text">Live tourism and business sites.</p>
+            </a>
+            <a class="work-hub-card" href="work/graphics.html">
+              <span class="work-hub-card__eyebrow">Graphics</span>
+              <h2 class="work-hub-card__title">Design</h2>
+              <p class="work-hub-card__text">Social media, church flyers, and print.</p>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer" data-footer>
+      <div class="site-footer__cta">
+        <div class="site-footer__cta-inner">
+          <p class="site-footer__mark">AVM</p>
+          <div>
+            <p class="site-footer__cta-title">Have a brief in mind?</p>
+            <p class="site-footer__cta-text">Engineering, web, or graphics – let's talk.</p>
+          </div>
+          <a class="btn btn--primary" href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="site-footer__inner">
+        <div class="site-footer__brand-block">
+          <div class="site-footer__profile">
+            <img class="site-footer__avatar" src="assets/images/about/footer.jpg" alt="Albart V Mwamalumbili" width="96" height="96" loading="lazy" />
+            <div>
+              <p class="site-footer__brand">Albart V Mwamalumbili</p>
+              <p class="site-footer__text">
+                Software Engineer, Web Developer, and Graphics Designer building systems people actually use.
+              </p>
+              <a class="site-footer__phone" href="tel:+255748952582">+255 748 952 582</a>
+
+            </div>
+          </div>
+        </div>
+        <div>
+          <p class="site-footer__heading">Explore</p>
+          <ul class="site-footer__list">
+            <li><a class="site-footer__link" href="work.html">Works</a></li>
+            <li><a class="site-footer__link" href="about.html">About me</a></li>
+            <li><a class="site-footer__link" href="services.html">My services</a></li>
+            <li><a class="site-footer__link" href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <p class="site-footer__heading">Connect</p>
+          <div class="site-footer__social">
+            <a class="site-footer__social-link" href="mailto:mwamalumbilialbart@gmail.com" aria-label="Email">
+              <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="assets/icons/ui/sprite.svg#icon-mail"></use></svg>
+            </a>
+            <a class="site-footer__social-link" href="https://www.linkedin.com/in/albart-mwamalumbili-b3b69b377/" rel="noopener noreferrer" target="_blank" aria-label="LinkedIn">
+              <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="assets/icons/ui/sprite.svg#icon-linkedin"></use></svg>
+            </a>
+            <a class="site-footer__social-link" href="https://github.com/albert-victor" rel="noopener noreferrer" target="_blank" aria-label="GitHub">
+              <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="assets/icons/ui/sprite.svg#icon-github"></use></svg>
+            </a>
+            <a class="site-footer__social-link" href="https://www.instagram.com/_i_am_albertvictor/" rel="noopener noreferrer" target="_blank" aria-label="Instagram">
+              <svg width="18" height="18" aria-hidden="true" focusable="false"><use href="assets/icons/ui/sprite.svg#icon-instagram"></use></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="site-footer__bottom">
+        <p>&copy; <span data-year></span> Albart V Mwamalumbili</p>
+        <a class="site-footer__top" href="#main">Back to top</a>
+      </div>
+    </footer>
+
+    <script type="module" src="js/main.js?v=20260730"></script>
+  </body>
+</html>

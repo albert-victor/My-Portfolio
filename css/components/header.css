@@ -52,7 +52,20 @@ html[data-theme="dark"] .site-header.is-scrolled {
 
 .site-header__brand {
   position: relative;
-  display: block;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  flex: 0 0 auto;
+  max-width: min(16rem, 42vw);
+  color: var(--color-text);
+  text-decoration: none;
+  transition:
+    transform var(--duration-med) var(--ease-out),
+    color var(--duration-fast) var(--ease-out);
+}
+
+.site-header__brand-avatar {
+  position: relative;
   flex: 0 0 auto;
   width: 2.65rem;
   height: 2.65rem;
@@ -61,15 +74,13 @@ html[data-theme="dark"] .site-header.is-scrolled {
   border-radius: 999px;
   background: var(--color-bg-elevated) url("../../assets/icons/brand-avatar.svg") center / cover no-repeat;
   box-shadow: 0 4px 14px rgba(12, 17, 22, 0.14);
-  font-size: 0;
-  color: transparent;
   transition:
     transform var(--duration-med) var(--ease-out),
     border-color var(--duration-fast) var(--ease-out),
     box-shadow var(--duration-med) var(--ease-out);
 }
 
-.site-header__brand::after {
+.site-header__brand-avatar::after {
   content: "";
   position: absolute;
   right: 0.05rem;
@@ -84,19 +95,61 @@ html[data-theme="dark"] .site-header.is-scrolled {
     border-color var(--duration-med) var(--ease-out);
 }
 
-.site-header__brand:hover {
-  border-color: var(--color-accent);
-  box-shadow: 0 7px 18px rgba(12, 17, 22, 0.2);
-  transform: translateY(-1px) scale(1.04);
+.site-header__brand-text {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  line-height: 1.15;
 }
 
-.site-header__brand:hover::after {
+.site-header__brand-name {
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: var(--weight-bold);
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.site-header__brand-tag {
+  font-size: 0.62rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-text-muted);
+}
+
+.site-header__brand:hover {
+  color: var(--color-text);
+  transform: translateY(-1px);
+}
+
+.site-header__brand:hover .site-header__brand-avatar {
+  border-color: var(--color-accent);
+  box-shadow: 0 7px 18px rgba(12, 17, 22, 0.2);
+  transform: scale(1.04);
+}
+
+.site-header__brand:hover .site-header__brand-avatar::after {
   transform: scale(1.15);
 }
 
 .site-header__brand:focus-visible {
   outline: 3px solid color-mix(in srgb, var(--color-accent) 38%, transparent);
   outline-offset: 3px;
+  border-radius: var(--radius-md);
+}
+
+@media (max-width: 36rem) {
+  .site-header__brand-tag {
+    display: none;
+  }
+
+  .site-header__brand-name {
+    font-size: 0.82rem;
+  }
 }
 
 .site-header__actions {

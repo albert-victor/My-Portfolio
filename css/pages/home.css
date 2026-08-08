@@ -386,18 +386,17 @@ html[data-theme="dark"] .spec-card__meta li {
 
 .clients__marquee {
   position: relative;
-  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
-  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  overflow: hidden;
+  mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
 }
 
 .clients__track {
   display: flex;
+  align-items: center;
+  gap: var(--space-5);
   width: max-content;
-  animation: clients-scroll 42s linear infinite;
-}
-
-.clients__marquee:hover .clients__track {
-  animation-play-state: paused;
+  will-change: transform;
 }
 
 .clients__list {
@@ -406,7 +405,7 @@ html[data-theme="dark"] .spec-card__meta li {
   gap: var(--space-5);
   list-style: none;
   margin: 0;
-  padding-inline: var(--space-3);
+  padding-inline: 0;
 }
 
 .clients__item {
@@ -452,18 +451,10 @@ html[data-theme="dark"] .spec-card__meta li {
   color: var(--color-text-muted);
 }
 
+/* Keep logo plates light in dark mode so dark marks stay readable */
 html[data-theme="dark"] .clients__item img {
-  background: var(--color-bg-elevated);
-  border-color: var(--color-border);
-}
-
-@keyframes clients-scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-50%);
-  }
+  background: #ffffff;
+  border-color: color-mix(in srgb, var(--color-border) 55%, #ffffff);
 }
 
 @media (max-width: 62rem) {
@@ -507,8 +498,7 @@ html[data-theme="dark"] .clients__item img {
     transform: none;
   }
 
-  .testimonials__track,
-  .clients__track {
+  .testimonials__track {
     animation: none;
   }
 
@@ -519,7 +509,6 @@ html[data-theme="dark"] .clients__item img {
     -webkit-mask-image: none;
   }
 
-  .clients__list[aria-hidden="true"],
   .testimonials__track > .testimonials__card:nth-child(n + 5) {
     display: none;
   }

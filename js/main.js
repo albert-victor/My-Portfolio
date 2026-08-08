@@ -12,6 +12,7 @@ import { initMedia } from "./modules/media.js";
 import { initWorkFilter } from "./modules/work-filter.js";
 import { initContactForm } from "./modules/contact-form.js";
 import { initWhatsAppFloat } from "./modules/wa-float.js";
+import { initClientsMarquee } from "./modules/clients-marquee.js";
 
 function initFooterYear() {
   const year = qs("[data-year]");
@@ -39,6 +40,7 @@ function boot() {
   safe("contact-form", initContactForm);
   safe("footer-year", initFooterYear);
   safe("wa-float", initWhatsAppFloat);
+  safe("clients-marquee", initClientsMarquee);
 }
 
 onReady(boot);

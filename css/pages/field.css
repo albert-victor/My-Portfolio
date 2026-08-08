@@ -260,18 +260,18 @@ html[data-theme="dark"] .gallery-filters {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: var(--space-3);
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: var(--space-4);
 }
 
 .gallery-item {
   position: relative;
   overflow: hidden;
-  border-radius: var(--radius-md);
+  border-radius: var(--radius-lg);
   border: 1px solid var(--color-border);
   background: var(--color-bg-elevated);
-  aspect-ratio: 3 / 4;
-  box-shadow: 0 1px 2px rgba(12, 17, 22, 0.04), 0 6px 16px rgba(12, 17, 22, 0.05);
+  aspect-ratio: 4 / 5;
+  box-shadow: 0 1px 2px rgba(12, 17, 22, 0.04), 0 8px 20px rgba(12, 17, 22, 0.06);
   scroll-margin-top: calc(var(--header-height) + 3.25rem);
 }
 
@@ -289,7 +289,7 @@ html[data-theme="dark"] .gallery-filters {
 .gallery-item__meta {
   position: absolute;
   inset: auto 0 0 0;
-  padding: 0.65rem 0.75rem 0.7rem;
+  padding: 0.85rem 1rem 0.9rem;
   background: linear-gradient(transparent, rgba(10, 12, 14, 0.78));
   color: #ffffff;
   transform: translateY(0.25rem);
@@ -301,8 +301,8 @@ html[data-theme="dark"] .gallery-filters {
 
 .gallery-item__tag {
   display: inline-block;
-  margin-bottom: 0.2rem;
-  font-size: 0.58rem;
+  margin-bottom: 0.25rem;
+  font-size: 0.62rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
   opacity: 0.8;
@@ -310,7 +310,7 @@ html[data-theme="dark"] .gallery-filters {
 
 .gallery-item__title {
   font-family: var(--font-display);
-  font-size: 0.8rem;
+  font-size: 0.92rem;
   font-weight: var(--weight-semibold);
   line-height: 1.25;
 }
@@ -401,12 +401,6 @@ html[data-theme="dark"] .gallery-filters {
   line-height: 1.55;
 }
 
-@media (max-width: 72rem) {
-  .gallery-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
 @media (max-width: 62rem) {
   .field-hero__grid,
   .field-story,
@@ -418,6 +412,7 @@ html[data-theme="dark"] .gallery-filters {
 
   .gallery-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--space-3);
   }
 }
 
@@ -429,8 +424,8 @@ html[data-theme="dark"] .gallery-filters {
 
 @media (max-width: 36rem) {
   .gallery-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: var(--space-2);
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
   }
 }
 

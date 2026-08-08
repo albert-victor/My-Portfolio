@@ -191,14 +191,34 @@
 }
 
 .works-mega__card:hover,
+.works-mega__card:focus-visible,
 .works-mega__card[aria-current="page"] {
-  border-color: color-mix(in srgb, var(--color-accent) 45%, var(--color-border));
-  background: #ffffff;
-  color: inherit;
+  border-color: color-mix(in srgb, var(--color-accent) 55%, var(--color-border));
+  background: var(--color-accent-subtle);
+  color: var(--color-text);
+  text-decoration: none;
   transform: translateY(-2px);
   box-shadow:
-    0 2px 6px rgba(18, 23, 28, 0.06),
-    0 12px 24px rgba(18, 23, 28, 0.1);
+    0 2px 6px color-mix(in srgb, var(--color-accent) 12%, transparent),
+    0 12px 24px color-mix(in srgb, var(--color-accent) 14%, transparent);
+}
+
+.works-mega__card:hover .works-mega__title,
+.works-mega__card:focus-visible .works-mega__title,
+.works-mega__card[aria-current="page"] .works-mega__title {
+  color: var(--color-text);
+}
+
+.works-mega__card:hover .works-mega__text,
+.works-mega__card:focus-visible .works-mega__text,
+.works-mega__card[aria-current="page"] .works-mega__text {
+  color: var(--color-text-muted);
+}
+
+.works-mega__card:hover .works-mega__eyebrow,
+.works-mega__card:focus-visible .works-mega__eyebrow,
+.works-mega__card[aria-current="page"] .works-mega__eyebrow {
+  color: var(--color-accent-hover);
 }
 
 html[data-theme="dark"] .works-mega {
@@ -216,9 +236,12 @@ html[data-theme="dark"] .works-mega__card {
 }
 
 html[data-theme="dark"] .works-mega__card:hover,
+html[data-theme="dark"] .works-mega__card:focus-visible,
 html[data-theme="dark"] .works-mega__card[aria-current="page"] {
-  background: color-mix(in srgb, var(--color-bg-elevated) 70%, var(--color-surface));
-  box-shadow: var(--shadow-card);
+  background: color-mix(in srgb, var(--color-accent-subtle) 85%, var(--color-surface));
+  border-color: color-mix(in srgb, var(--color-accent) 50%, var(--color-border));
+  color: var(--color-text);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28);
 }
 
 .works-mega__eyebrow {

@@ -1,4 +1,4 @@
-/* Field discipline pages — engineering / web / graphics */
+/* Field discipline pages – engineering / web / graphics */
 
 .field-hero {
   padding-block: var(--space-8) var(--space-6);
@@ -176,8 +176,9 @@ html[data-theme="dark"] .page--field .site-header.is-scrolled {
   position: sticky;
   top: var(--header-height);
   z-index: calc(var(--z-header) - 1);
-  margin: 0 calc(-1 * var(--space-2)) var(--space-4);
-  padding: 0.45rem var(--space-2) 0.55rem;
+  margin: 0 0 var(--space-4);
+  max-width: 100%;
+  padding: 0.45rem 0 0.55rem;
   border: none;
   border-radius: 0;
   background: var(--color-bg);

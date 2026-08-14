@@ -9,28 +9,28 @@ alwaysApply: true
 
 - Save and write all text sources as **UTF-8** (no BOM preferred).
 - Keep `<meta charset="UTF-8" />` on every HTML page.
-- Prefer real characters in copy: `—` (em dash), `–` (en dash), `·` (middot).
+- Prefer real characters in copy: `–` (em dash), `–` (en dash), `·` (middot).
 - In HTML you may also use entities: `&mdash;`, `&ndash;`, `&middot;`, `&rsquo;`.
 
 ## Never
 
 - Do not use PowerShell `Set-Content` without UTF-8 on these files.
 - Do not re-save as Windows-1252 / ANSI.
-- Do not globally replace ` ? ` in **JavaScript** — that destroys ternaries (`a ? b : c`).
+- Do not globally replace ` ? ` in **JavaScript** – that destroys ternaries (`a ? b : c`).
 
 ## If you see `?` mid-sentence in HTML/CSS
 
-Treat as corruption of `—` or a curly apostrophe:
+Treat as corruption of `–` or a curly apostrophe:
 
-- `Pick a lane ? or` → `Pick a lane — or`
-- `01 ? Engineering` → `01 — Engineering`
+- `Pick a lane ? or` → `Pick a lane – or`
+- `01 ? Engineering` → `01 – Engineering`
 - `Let?s` / `I?ll` → `Let's` / `I'll`
 
-## If JS shows `—` where a ternary should be
+## If JS shows `–` where a ternary should be
 
 Restore `?`:
 
-- `cond — "a" : "b"` → `cond ? "a" : "b"`
+- `cond – "a" : "b"` → `cond ? "a" : "b"`
 
 ## When editing with scripts
 

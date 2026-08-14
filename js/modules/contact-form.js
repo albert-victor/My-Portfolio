@@ -1,5 +1,5 @@
 /**
- * Contact form — validation, intent chips, char count, success state.
+ * Contact form – validation, intent chips, char count, success state.
  */
 
 import { qs, qsa } from "../utils/dom.js";

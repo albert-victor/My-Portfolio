@@ -1,0 +1,15 @@
+# AVM Portfolio – https://github.com/albert-victor/My-Portfolio
+# Replace YOUR-DOMAIN.com with your live domain before deploying.
+
+User-agent: *
+Allow: /
+
+# Internal / dev paths – not for search engines
+Disallow: /previews/
+Disallow: /components/
+Disallow: /api/
+Disallow: /data/
+Disallow: /stats.html
+
+# Sitemap (update domain when you go live)
+Sitemap: https://YOUR-DOMAIN.com/sitemap.xml

@@ -1,5 +1,5 @@
 /**
- * Stylesheet entry — import order is intentional.
+ * Stylesheet entry – import order is intentional.
  * tokens → reset → base → layout → components → pages → utilities
  */
 
@@ -9,9 +9,9 @@
 @import url("layout.css");
 
 @import url("components/button.css");
-@import url("components/header.css?v=20260730");
+@import url("components/header.css?v=20260813");
 @import url("components/footer.css");
-@import url("components/nav.css");
+@import url("components/nav.css?v=20260813");
 @import url("components/tag.css");
 @import url("components/project-teaser.css");
 @import url("components/form.css");
@@ -26,5 +26,6 @@
 @import url("pages/services.css");
 @import url("pages/contact.css");
 @import url("pages/field.css");
+@import url("pages/stats.css");
 
 @import url("utilities.css");

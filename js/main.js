@@ -1,5 +1,5 @@
 /**
- * Application bootstrap — page behaviors load progressively.
+ * Application bootstrap – page behaviors load progressively.
  */
 
 import { onReady, qs } from "./utils/dom.js";
@@ -13,6 +13,7 @@ import { initWorkFilter } from "./modules/work-filter.js";
 import { initContactForm } from "./modules/contact-form.js";
 import { initWhatsAppFloat } from "./modules/wa-float.js";
 import { initClientsMarquee } from "./modules/clients-marquee.js";
+import { initAnalytics } from "./modules/analytics.js";
 
 function initFooterYear() {
   const year = qs("[data-year]");
@@ -41,6 +42,7 @@ function boot() {
   safe("footer-year", initFooterYear);
   safe("wa-float", initWhatsAppFloat);
   safe("clients-marquee", initClientsMarquee);
+  safe("analytics", initAnalytics);
 }
 
 onReady(boot);

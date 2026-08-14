@@ -1,4 +1,4 @@
-/* Home — comfortable above-the-fold landing + moving testimonials */
+/* Home – comfortable above-the-fold landing + moving testimonials */
 
 .hero {
   position: relative;
@@ -83,7 +83,7 @@
   padding: 0.5rem 1rem;
 }
 
-/* ——— Compact cards: larger image, no empty body gap ——— */
+/* ––– Compact cards: larger image, no empty body gap ––– */
 .spec-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -254,7 +254,7 @@ html[data-theme="dark"] .spec-card__meta li {
   background: var(--color-surface);
 }
 
-/* ——— Testimonials marquee ——— */
+/* ––– Testimonials marquee ––– */
 .testimonials {
   padding-block: var(--space-7);
   overflow: hidden;
@@ -284,6 +284,7 @@ html[data-theme="dark"] .spec-card__meta li {
 
 .testimonials__marquee {
   position: relative;
+  overflow: hidden;
   mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
   -webkit-mask-image: linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);
 }
@@ -341,7 +342,7 @@ html[data-theme="dark"] .spec-card__meta li {
   }
 }
 
-/* Clients — logo strip */
+/* Clients – logo strip */
 .clients {
   padding-block: var(--space-7) var(--space-8);
   overflow: hidden;

@@ -1,6 +1,6 @@
 /**
  * Preview-only: specialization card style alternatives.
- * Open /previews/card-styles.html — pick a letter, then tell me which to apply on home.
+ * Open /previews/card-styles.html – pick a letter, then tell me which to apply on home.
  */
 
 .card-picker {
@@ -84,7 +84,7 @@
   border: 1px solid var(--color-border);
 }
 
-/* ——— A: Current (image overlay) ——— */
+/* ––– A: Current (image overlay) ––– */
 .v-a {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -143,7 +143,7 @@
   opacity: 0.88;
 }
 
-/* ——— B: Split rail (image strip + text) ——— */
+/* ––– B: Split rail (image strip + text) ––– */
 .v-b {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -214,7 +214,7 @@
   color: var(--color-accent);
 }
 
-/* ——— C: Editorial rows (no image cards) ——— */
+/* ––– C: Editorial rows (no image cards) ––– */
 .v-c {
   display: flex;
   flex-direction: column;
@@ -272,7 +272,7 @@
   white-space: nowrap;
 }
 
-/* ——— D: Soft panel + floating number ——— */
+/* ––– D: Soft panel + floating number ––– */
 .v-d {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -333,7 +333,7 @@
   color: var(--color-accent);
 }
 
-/* ——— E: Horizontal media bands ——— */
+/* ––– E: Horizontal media bands ––– */
 .v-e {
   display: flex;
   flex-direction: column;

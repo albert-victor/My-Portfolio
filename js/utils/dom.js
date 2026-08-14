@@ -1,5 +1,5 @@
 /**
- * Shared utilities — no DOM side effects.
+ * Shared utilities – no DOM side effects.
  */
 
 export function qs(selector, scope = document) {

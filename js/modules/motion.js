@@ -1,5 +1,5 @@
 /**
- * Global scroll reveal — calm directions, respects reduced motion.
+ * Global scroll reveal – calm directions, respects reduced motion.
  */
 
 import { qsa, prefersReducedMotion } from "../utils/dom.js";

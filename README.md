@@ -1,6 +1,6 @@
-# AVM — Albart V Mwamalumbili
+# AVM – Albart V Mwamalumbili
 
-Personal portfolio for  ME **Albart Victa Mwamalumbili** — Software Engineer, Web Developer, and Graphics Designer.
+Personal portfolio for  ME **Albart Victa Mwamalumbili** – Software Engineer, Web Developer, and Graphics Designer.
 
 A calm, modern static site that presents real work across systems, websites, and brand visuals. Built for clarity: recruiters skim, clients decide, and the craft holds up under a closer look.
 
@@ -12,17 +12,17 @@ A calm, modern static site that presents real work across systems, websites, and
 | --- | --- |
 | **Software engineering** | APIs, databases, and full-stack systems for education, health, and business |
 | **Web development** | Fast, conversion-minded sites for tourism and local businesses |
-| **Graphics design** | Brand marks, posters, and UI assets — with a live portfolio on Instagram |
+| **Graphics design** | Brand marks, posters, and UI assets – with a live portfolio on Instagram |
 
 ---
 
 ## Pages
 
-- **Home** — identity, specializations, selected work, clients, capabilities  
-- **Work** — filterable projects by discipline  
-- **About** — background, experience (MUHAS, TTCL), education (RUCU)  
-- **Services** — clear offers for engineering, web, and design  
-- **Contact** — direct channels, intent chips, and a lightweight form  
+- **Home** – identity, specializations, selected work, clients, capabilities  
+- **Work** – filterable projects by discipline  
+- **About** – background, experience (MUHAS, TTCL), education (RUCU)  
+- **Services** – clear offers for engineering, web, and design  
+- **Contact** – direct channels, intent chips, and a lightweight form  
 
 ---
 

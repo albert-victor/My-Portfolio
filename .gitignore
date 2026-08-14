@@ -5,3 +5,7 @@ Thumbs.db
 .vscode/
 node_modules/
 .cache/
+
+# Analytics data (private visit logs)
+data/
+api/config.php

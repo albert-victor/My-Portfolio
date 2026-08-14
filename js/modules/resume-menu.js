@@ -1,5 +1,5 @@
 /**
- * Resume dropdown — pick Software Engineering, Web, or Graphics CV.
+ * Resume dropdown – pick Software Engineering, Web, or Graphics CV.
  */
 
 import { qs, qsa } from "../utils/dom.js";

@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow" />
+    <title>Visit Stats – AVM Portfolio</title>
+    <link rel="icon" href="assets/images/brand/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="css/main.css?v=20260811a" />
+    <link rel="stylesheet" href="css/pages/stats.css?v=20260811a" />
+  </head>
+  <body class="page stats-page">
+    <div class="stats-page__inner">
+      <header class="stats-page__header">
+        <h1 class="stats-page__title">Portfolio Analytics</h1>
+        <p class="stats-page__subtitle">Visits, search traffic, and referrers – private dashboard</p>
+      </header>
+
+      <section class="stats-login" id="stats-login">
+        <form id="stats-login-form">
+          <label for="stats-key">Secret key</label>
+          <input
+            id="stats-key"
+            name="key"
+            type="password"
+            autocomplete="current-password"
+            placeholder="Enter key from api/config.php"
+            required
+          />
+          <button class="btn btn--primary" type="submit">View stats</button>
+          <p class="stats-error stats-hidden" id="stats-login-error" role="alert"></p>
+        </form>
+      </section>
+
+      <div id="stats-dashboard" class="stats-hidden" hidden>
+        <div class="stats-actions">
+          <button class="btn btn--ghost" type="button" id="stats-refresh">Refresh</button>
+          <button class="btn btn--ghost" type="button" id="stats-logout">Log out</button>
+          <a class="btn btn--ghost" href="index.html">← Back to site</a>
+        </div>
+
+        <div class="stats-grid" id="stats-summary"></div>
+
+        <div class="stats-layout">
+          <section class="stats-panel">
+            <h2 class="stats-panel__title">Top pages</h2>
+            <ul class="stats-bar-list" id="stats-pages"></ul>
+          </section>
+          <section class="stats-panel">
+            <h2 class="stats-panel__title">Traffic sources</h2>
+            <ul class="stats-bar-list" id="stats-sources"></ul>
+          </section>
+          <section class="stats-panel">
+            <h2 class="stats-panel__title">Search queries</h2>
+            <ul class="stats-bar-list" id="stats-searches"></ul>
+          </section>
+          <section class="stats-panel">
+            <h2 class="stats-panel__title">Top referrers</h2>
+            <ul class="stats-bar-list" id="stats-referrers"></ul>
+          </section>
+        </div>
+
+        <section class="stats-panel">
+          <h2 class="stats-panel__title">Last 30 days</h2>
+          <ul class="stats-bar-list" id="stats-daily"></ul>
+        </section>
+
+        <section class="stats-panel">
+          <h2 class="stats-panel__title">Recent visits</h2>
+          <div class="stats-table-wrap">
+            <table class="stats-table">
+              <thead>
+                <tr>
+                  <th>Time</th>
+                  <th>Page</th>
+                  <th>Source</th>
+                  <th>Device</th>
+                  <th>Search / Referrer</th>
+                </tr>
+              </thead>
+              <tbody id="stats-recent"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <p class="stats-meta" id="stats-meta"></p>
+      </div>
+    </div>
+
+    <script type="module">
+      const STORAGE_KEY = "avm-stats-key";
+      const loginEl = document.getElementById("stats-login");
+      const dashboardEl = document.getElementById("stats-dashboard");
+      const loginForm = document.getElementById("stats-login-form");
+      const loginError = document.getElementById("stats-login-error");
+      const keyInput = document.getElementById("stats-key");
+
+      function showDashboard(show) {
+        loginEl.classList.toggle("stats-hidden", show);
+        dashboardEl.classList.toggle("stats-hidden", !show);
+        dashboardEl.hidden = !show;
+      }
+
+      function renderBarList(container, items, emptyText) {
+        container.innerHTML = "";
+        if (!items?.length) {
+          container.innerHTML = `<li class="stats-bar-list__item"><span class="stats-bar-list__label">${emptyText}</span></li>`;
+          return;
+        }
+        const max = items[0].count || 1;
+        for (const item of items) {
+          const pct = Math.round((item.count / max) * 100);
+          const li = document.createElement("li");
+          li.className = "stats-bar-list__item";
+          li.innerHTML = `
+            <span class="stats-bar-list__label" title="${escapeHtml(item.label)}">${escapeHtml(item.label)}</span>
+            <span class="stats-bar-list__count">${item.count}</span>
+            <div class="stats-bar-list__track"><div class="stats-bar-list__fill" style="width:${pct}%"></div></div>
+          `;
+          container.appendChild(li);
+        }
+      }
+
+      function escapeHtml(str) {
+        return String(str)
+          .replace(/&/g, "&amp;")
+          .replace(/</g, "&lt;")
+          .replace(/>/g, "&gt;")
+          .replace(/"/g, "&quot;");
+      }
+
+      function formatTime(ts) {
+        return new Date(ts * 1000).toLocaleString();
+      }
+
+      async function loadStats(key) {
+        const res = await fetch(`api/stats.php?key=${encodeURIComponent(key)}`);
+        const data = await res.json();
+        if (!res.ok || !data.ok) {
+          throw new Error(data.error || "Failed to load stats");
+        }
+        return data;
+      }
+
+      function renderStats(data) {
+        const s = data.summary;
+        document.getElementById("stats-summary").innerHTML = `
+          <article class="stats-card"><p class="stats-card__value">${s.totalVisits}</p><p class="stats-card__label">Total page views</p></article>
+          <article class="stats-card"><p class="stats-card__value">${s.uniqueSessions}</p><p class="stats-card__label">Unique sessions</p></article>
+          <article class="stats-card"><p class="stats-card__value">${s.visitsToday}</p><p class="stats-card__label">Today</p></article>
+          <article class="stats-card"><p class="stats-card__value">${s.visitsThisWeek}</p><p class="stats-card__label">Last 7 days</p></article>
+          <article class="stats-card"><p class="stats-card__value">${s.searchVisits}</p><p class="stats-card__label">From search engines</p></article>
+        `;
+
+        renderBarList(document.getElementById("stats-pages"), data.topPages, "No visits yet");
+        renderBarList(document.getElementById("stats-sources"), data.topSources, "No source data");
+        renderBarList(document.getElementById("stats-searches"), data.topSearchQueries, "No search queries yet");
+        renderBarList(document.getElementById("stats-referrers"), data.topReferrers, "No referrers yet");
+
+        const dailyItems = Object.entries(data.dailyLast30 || {})
+          .map(([label, count]) => ({ label, count }))
+          .reverse();
+        renderBarList(document.getElementById("stats-daily"), dailyItems, "No daily data yet");
+
+        const recentBody = document.getElementById("stats-recent");
+        recentBody.innerHTML = "";
+        for (const v of data.recentVisits || []) {
+          let extra = v.searchQuery || "–";
+          if (!v.searchQuery && v.referrer) {
+            try {
+              extra = new URL(v.referrer).hostname;
+            } catch {
+              extra = v.referrer;
+            }
+          }
+          const tr = document.createElement("tr");
+          tr.innerHTML = `
+            <td>${formatTime(v.ts)}</td>
+            <td>${escapeHtml(v.page)}</td>
+            <td>${escapeHtml(v.source || "direct")}</td>
+            <td>${escapeHtml(v.device || "–")}</td>
+            <td>${escapeHtml(extra)}</td>
+          `;
+          recentBody.appendChild(tr);
+        }
+
+        document.getElementById("stats-meta").textContent =
+          `Last updated: ${new Date(data.generatedAt * 1000).toLocaleString()}`;
+      }
+
+      async function authenticate(key) {
+        loginError.classList.add("stats-hidden");
+        try {
+          const data = await loadStats(key);
+          sessionStorage.setItem(STORAGE_KEY, key);
+          renderStats(data);
+          showDashboard(true);
+        } catch (err) {
+          loginError.textContent = err.message || "Invalid key or server error. Use Apache/XAMPP with PHP enabled.";
+          loginError.classList.remove("stats-hidden");
+          showDashboard(false);
+        }
+      }
+
+      loginForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+        authenticate(keyInput.value.trim());
+      });
+
+      document.getElementById("stats-refresh").addEventListener("click", () => {
+        const key = sessionStorage.getItem(STORAGE_KEY);
+        if (key) authenticate(key);
+      });
+
+      document.getElementById("stats-logout").addEventListener("click", () => {
+        sessionStorage.removeItem(STORAGE_KEY);
+        keyInput.value = "";
+        showDashboard(false);
+      });
+
+      const savedKey = sessionStorage.getItem(STORAGE_KEY);
+      const urlKey = new URLSearchParams(location.search).get("key");
+      const initialKey = urlKey || savedKey;
+      if (initialKey) {
+        keyInput.value = initialKey;
+        authenticate(initialKey);
+      }
+    </script>
+  </body>
+</html>

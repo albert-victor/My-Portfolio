@@ -19,6 +19,15 @@ export const DISCIPLINES = {
 
 export const SITE = {
   name: "Albart V Mwamalumbili",
+  alternateNames: [
+    "Albart Victor Mwamalumbili",
+    "Albert Victor Mwamalumbili",
+    "Albart Victa Mwamalumbili",
+    "Albart Victor",
+    "Albert Victor",
+    "Albart Victa",
+    "Albart Mwamalumbili",
+  ],
   email: "mwamalumbilialbart@gmail.com",
   phone: "+255748952582",
   phoneDisplay: "+255 748 952 582",
@@ -27,6 +36,8 @@ export const SITE = {
   instagram: "https://www.instagram.com/_i_am_albertvictor/",
   /** International WhatsApp number without + */
   whatsapp: "255748952582",
+  /** Production URL – set before deploy (no trailing slash). Used for canonical/OG tags. */
+  baseUrl: "",
   resumes: {
     engineering: "assets/cvs/resume-software-engineering.pdf",
     web: "assets/cvs/resume-web-designer.pdf",

@@ -1,5 +1,5 @@
 /**
- * Small reusable helpers — use sparingly; prefer components.
+ * Small reusable helpers – use sparingly; prefer components.
  */
 
 .u-sr-only {
@@ -27,8 +27,8 @@
 }
 
 .u-full-bleed {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
+  width: 100%;
+  margin-inline: 0;
 }
 
 .u-mt-0 { margin-top: 0; }
@@ -43,7 +43,7 @@
 .u-gap-4 { gap: var(--space-4); }
 .u-gap-5 { gap: var(--space-5); }
 
-/* ——— Scroll reveal ——— */
+/* ––– Scroll reveal ––– */
 [data-reveal] {
   opacity: 0;
   transform: translate3d(0, 1.75rem, 0);

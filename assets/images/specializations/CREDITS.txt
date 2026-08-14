@@ -1,8 +1,8 @@
-Real specialization card photos (Unsplash — photographed, not AI-generated).
+Real specialization card photos (Unsplash – photographed, not AI-generated).
 
-engineering.jpg — photo-1461749280684-dccba630e2f6 (Christopher Gower)
-web.jpg         — photo-1460925895917-afdab827c52f (Daniel Korpai)
-design.jpg      — photo-1561070791-2526d30994b5 ( Conti / Unsplash )
+engineering.jpg – photo-1461749280684-dccba630e2f6 (Christopher Gower)
+web.jpg         – photo-1460925895917-afdab827c52f (Daniel Korpai)
+design.jpg      – photo-1561070791-2526d30994b5 ( Conti / Unsplash )
 
 Replace these with your own project screenshots when ready:
 - engineering → system / dashboard UI from your work

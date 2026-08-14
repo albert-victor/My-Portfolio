@@ -42,7 +42,7 @@
   color: var(--color-text-muted);
 }
 
-/* ——— Shared landing shell: one viewport ——— */
+/* ––– Shared landing shell: one viewport ––– */
 .landing {
   min-height: calc(100dvh - 2.75rem);
   display: flex;
@@ -165,7 +165,7 @@
   }
 }
 
-/* ——— ALT A: Split identity + cards docked bottom ——— */
+/* ––– ALT A: Split identity + cards docked bottom ––– */
 .alt-a .landing__bg {
   background:
     radial-gradient(ellipse 70% 55% at 85% 15%, rgba(46, 196, 182, 0.16), transparent 55%),
@@ -188,7 +188,7 @@
   margin-top: 0.35rem;
 }
 
-/* ——— ALT B: Centered identity, cards under ——— */
+/* ––– ALT B: Centered identity, cards under ––– */
 .alt-b .landing__bg {
   background:
     linear-gradient(180deg, rgba(14, 17, 20, 0.2), #0e1114 70%),
@@ -226,7 +226,7 @@
   background: var(--color-bg-elevated);
 }
 
-/* ——— ALT C: Side portrait plane + compact cards ——— */
+/* ––– ALT C: Side portrait plane + compact cards ––– */
 .alt-c .landing {
   display: grid;
   grid-template-columns: 1.05fr 0.95fr;
@@ -306,7 +306,7 @@
   }
 }
 
-/* ——— ALT D: No-card editorial strips (anti-card option) ——— */
+/* ––– ALT D: No-card editorial strips (anti-card option) ––– */
 .alt-d .landing__bg {
   background:
     linear-gradient(90deg, transparent 64%, rgba(46, 196, 182, 0.05)),

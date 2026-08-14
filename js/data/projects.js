@@ -115,6 +115,20 @@ export const projects = [
     external: true,
   },
   {
+    id: "matembo-safari",
+    slug: "matembo-safari",
+    title: "Matembo Safaris & Tours",
+    summary:
+      "A modern, distinctive tourism website – refined branding and safari experiences presented with epic elegance and a premium guest journey.",
+    disciplines: ["web", "design"],
+    category: "web",
+    year: "2026",
+    featured: true,
+    cover: "assets/images/projects/covers/matembo-safari.jpg",
+    href: "https://www.matembosafaris.com",
+    external: true,
+  },
+  {
     id: "wildgaze",
     slug: "wildgaze",
     title: "WildGaze Safaris",

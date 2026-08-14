@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   gap: var(--space-4);
+  overflow: visible;
 }
 
 .site-nav__list {
@@ -11,10 +12,9 @@
   padding: 0.28rem;
   border-radius: 999px;
   border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
-  background: color-mix(in srgb, var(--color-bg-elevated) 55%, transparent);
-  backdrop-filter: blur(14px) saturate(160%);
-  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  background: color-mix(in srgb, var(--color-bg-elevated) 92%, transparent);
   box-shadow: 0 4px 16px rgba(18, 23, 28, 0.04);
+  overflow: visible;
 }
 
 .site-nav__item {
@@ -121,20 +121,31 @@
 
 /* Works mega dropdown */
 .site-nav__item[data-works-menu] {
-  position: relative;
+  position: static;
+}
+
+@media (min-width: 48.01rem) {
+  .site-nav {
+    position: relative;
+    overflow: visible;
+  }
+
+  .site-nav__item[data-works-menu] {
+    position: relative;
+  }
 }
 
 .works-mega {
   position: absolute;
-  top: 100%;
+  top: calc(100% + 0.35rem);
   left: 50%;
-  z-index: var(--z-overlay);
+  z-index: calc(var(--z-overlay) + 2);
   width: min(38rem, calc(100vw - 2rem));
   padding: 0.85rem var(--space-3) var(--space-3);
   margin-top: 0;
   border: 1px solid color-mix(in srgb, var(--color-border) 85%, #1a1f24);
   border-radius: var(--radius-lg);
-  background: #ffffff;
+  background: var(--color-bg-elevated);
   box-shadow:
     0 0 0 1px rgba(18, 23, 28, 0.04),
     0 4px 10px rgba(18, 23, 28, 0.06),
@@ -143,11 +154,13 @@
   opacity: 0;
   visibility: hidden;
   pointer-events: none;
-  transform: translate(-50%, 0.35rem);
+  transform: translate3d(-50%, 0.35rem, 0);
   transition:
     opacity 140ms var(--ease-out),
     transform 140ms var(--ease-out),
     visibility 140ms;
+  isolation: isolate;
+  contain: layout style;
 }
 
 /* Invisible bridge so the cursor never “falls” between trigger and panel */
@@ -164,19 +177,22 @@
   opacity: 1;
   visibility: visible;
   pointer-events: auto;
-  transform: translate(-50%, 0);
+  transform: translate3d(-50%, 0, 0);
 }
 
 .works-mega__grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: var(--space-2);
+  width: 100%;
 }
 
 .works-mega__card {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 0.35rem;
+  min-width: 0;
   padding: var(--space-4);
   border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
   border-radius: var(--radius-md);
@@ -257,12 +273,14 @@ html[data-theme="dark"] .works-mega__card[aria-current="page"] {
   font-size: 0.98rem;
   font-weight: var(--weight-bold);
   color: var(--color-text);
+  line-height: 1.2;
 }
 
 .works-mega__text {
   font-size: var(--text-caption);
   line-height: 1.45;
   color: var(--color-text-muted);
+  display: block;
 }
 
 html[data-theme="dark"] .site-nav__list {

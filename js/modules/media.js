@@ -1,5 +1,5 @@
 /**
- * Lazy media helpers — progressive enhancement for images/video.
+ * Lazy media helpers – progressive enhancement for images/video.
  */
 
 import { qsa } from "../utils/dom.js";

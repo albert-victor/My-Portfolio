@@ -25,7 +25,7 @@ export function initClientsMarquee() {
   track.appendChild(clone);
 
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const speed = 40; // px per second — calm, premium pace
+  const speed = 40; // px per second – calm, premium pace
   let raf = 0;
   let running = false;
   let offset = 0;

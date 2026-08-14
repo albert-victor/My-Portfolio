@@ -1,5 +1,5 @@
 /**
- * Light / dark theme toggle — default light, persist preference.
+ * Light / dark theme toggle – default light, persist preference.
  */
 
 import { qs } from "../utils/dom.js";

@@ -5,6 +5,10 @@ Thumbs.db
 .vscode/
 node_modules/
 .cache/
+.wrangler/
+
+# Source art archive (live copies are under assets/)
+graphics/
 
 # Analytics data (private visit logs)
 data/

@@ -36,11 +36,11 @@ export const SITE = {
   instagram: "https://www.instagram.com/_i_am_albertvictor/",
   /** International WhatsApp number without + */
   whatsapp: "255748952582",
-  /** Production URL – set before deploy (no trailing slash). Used for canonical/OG tags. */
-  baseUrl: "",
+  /** Production URL – no trailing slash. Used for canonical/OG tags. */
+  baseUrl: "https://albartportfolio.uk",
   resumes: {
     engineering: "assets/cvs/resume-software-engineering.pdf",
-    web: "assets/cvs/resume-web-designer.pdf",
-    design: "assets/cvs/resume-graphics-designer.pdf",
+    web: "cv/web-designer.html",
+    design: "cv/graphics-designer.html",
   },
 };

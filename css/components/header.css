@@ -7,6 +7,7 @@
   isolation: isolate;
   background-color: var(--color-header-bg);
   border-bottom: 1px solid transparent;
+  box-shadow: 0 0 48px rgba(46, 196, 182, 0.06);
   transition:
     border-color var(--duration-med) var(--ease-out),
     box-shadow var(--duration-med) var(--ease-out),
@@ -22,18 +23,27 @@
   pointer-events: none;
   background:
     linear-gradient(
-      180deg,
-      color-mix(in srgb, var(--color-bg-elevated) 55%, transparent),
-      color-mix(in srgb, var(--color-header-bg) 90%, transparent)
+      135deg,
+      color-mix(in srgb, var(--color-accent) 14%, transparent) 0%,
+      color-mix(in srgb, var(--color-bg-elevated) 62%, transparent) 38%,
+      color-mix(in srgb, var(--color-header-bg) 88%, transparent) 100%
     );
-  backdrop-filter: blur(24px) saturate(185%);
-  -webkit-backdrop-filter: blur(24px) saturate(185%);
+  backdrop-filter: blur(28px) saturate(240%) brightness(1.04);
+  -webkit-backdrop-filter: blur(28px) saturate(240%) brightness(1.04);
 }
 
 .site-header.is-scrolled {
-  border-bottom-color: color-mix(in srgb, var(--color-border) 55%, transparent);
-  box-shadow: 0 12px 32px rgba(12, 17, 22, 0.1);
-  background-color: color-mix(in srgb, var(--color-bg-elevated) 48%, transparent);
+  border-bottom-color: color-mix(in srgb, var(--color-accent) 22%, var(--color-border) 45%);
+  box-shadow:
+    0 12px 36px rgba(12, 17, 22, 0.12),
+    0 0 56px rgba(46, 196, 182, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.42);
+  background-color: color-mix(in srgb, var(--color-bg-elevated) 52%, transparent);
+}
+
+.site-header.is-scrolled::before {
+  backdrop-filter: blur(32px) saturate(260%) brightness(1.06);
+  -webkit-backdrop-filter: blur(32px) saturate(260%) brightness(1.06);
 }
 
 html[data-theme="dark"] .site-header.is-scrolled {

@@ -12,6 +12,7 @@ import { initMedia } from "./modules/media.js";
 import { initWorkFilter } from "./modules/work-filter.js";
 import { initContactForm } from "./modules/contact-form.js";
 import { initWhatsAppFloat } from "./modules/wa-float.js";
+import { initBackToTop } from "./modules/back-to-top.js";
 import { initClientsMarquee } from "./modules/clients-marquee.js";
 import { initAnalytics } from "./modules/analytics.js";
 
@@ -41,6 +42,7 @@ function boot() {
   safe("contact-form", initContactForm);
   safe("footer-year", initFooterYear);
   safe("wa-float", initWhatsAppFloat);
+  safe("back-to-top", initBackToTop);
   safe("clients-marquee", initClientsMarquee);
   safe("analytics", initAnalytics);
 }

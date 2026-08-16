@@ -20,7 +20,7 @@ function collectRevealTargets() {
       ".services-list__item",
       ".service-card",
       ".stack-item",
-      ".field-card",
+      ".eng-card",
       ".field-story__item",
       ".gallery-item",
       ".project-teaser",
@@ -28,9 +28,10 @@ function collectRevealTargets() {
       ".clients__marquee",
       ".testimonials__intro",
       ".section-header",
-      ".contact-channel",
-      ".contact-aside",
-      ".form--contact",
+      ".contact-atelier__hero",
+      ".contact-dock__card",
+      ".contact-brief__rail",
+      ".contact-brief__form",
     ].join(", ")
   );
 
@@ -69,7 +70,7 @@ function assignDirections(targets) {
 
     if (
       el.matches(
-        ".spec-card, .field-card, .gallery-item, .project-teaser, .work-grid__item, .service-card, .stack-item"
+        ".spec-card, .eng-card, .field-card, .gallery-item, .project-teaser, .work-grid__item, .service-card, .stack-item"
       )
     ) {
       el.setAttribute("data-reveal", "up");

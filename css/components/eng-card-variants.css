@@ -1,0 +1,204 @@
+/* Engineering project cards – Slice (Option F) + ratings */
+
+.eng-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  height: 100%;
+  color: var(--color-text);
+  text-decoration: none;
+  transition:
+    transform var(--duration-med) var(--ease-out),
+    border-color var(--duration-med) var(--ease-out),
+    box-shadow var(--duration-med) var(--ease-out);
+}
+
+.eng-card:hover {
+  color: var(--color-text);
+  transform: translateY(-0.35rem);
+}
+
+.eng-card__media {
+  overflow: hidden;
+  background: var(--color-surface);
+}
+
+.eng-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--duration-slow) var(--ease-out);
+}
+
+.eng-card:hover .eng-card__media img {
+  transform: scale(1.04);
+}
+
+.eng-card__title {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: var(--weight-semibold);
+  line-height: 1.2;
+  color: var(--color-text);
+}
+
+.eng-card__text {
+  font-size: var(--text-small);
+  line-height: 1.55;
+  color: var(--color-text-muted);
+}
+
+.eng-card__cta {
+  margin-top: auto;
+  font-size: var(--text-caption);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.eng-card__tag {
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.22rem 0.5rem;
+  border-radius: 999px;
+  font-size: 0.62rem;
+  font-weight: var(--weight-medium);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+  background: var(--color-accent-subtle);
+}
+
+/* Star rating */
+.eng-card__rating {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.eng-card__stars {
+  --rating: 4.3;
+  --star-size: 0.82rem;
+  position: relative;
+  display: inline-block;
+  height: var(--star-size);
+  line-height: 1;
+  font-size: var(--star-size);
+  letter-spacing: 0.14em;
+  color: color-mix(in srgb, var(--color-border) 85%, var(--color-text-muted));
+}
+
+.eng-card__stars::before,
+.eng-card__stars::after {
+  content: "★★★★★";
+}
+
+.eng-card__stars::after {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: calc((var(--rating) / 5) * 100%);
+  overflow: hidden;
+  color: #e8a820;
+  white-space: nowrap;
+}
+
+.eng-card__score {
+  font-size: 0.72rem;
+  font-weight: var(--weight-semibold);
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-muted);
+}
+
+.eng-card__rating--top .eng-card__score {
+  color: var(--color-text);
+}
+
+.field-projects .eng-card--slice {
+  height: 100%;
+}
+
+/* Slice layout */
+.eng-card--slice {
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  gap: 0;
+}
+
+.eng-card--slice .eng-card__top {
+  position: relative;
+  overflow: hidden;
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+  border: 1px solid var(--color-border);
+  border-bottom: none;
+}
+
+.eng-card--slice .eng-card__media {
+  aspect-ratio: 16 / 9;
+}
+
+.eng-card--slice .eng-card__media::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(125deg, rgba(8, 12, 16, 0.15), transparent 55%);
+  pointer-events: none;
+}
+
+.eng-card--slice .eng-card__panel {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  margin-top: -1.35rem;
+  margin-inline: var(--space-3);
+  padding: var(--space-4) var(--space-4) var(--space-5);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-elevated);
+  box-shadow: var(--shadow-card);
+}
+
+.eng-card--slice:hover .eng-card__panel {
+  border-color: color-mix(in srgb, var(--color-accent) 35%, var(--color-border));
+  box-shadow: var(--shadow-lift);
+}
+
+.eng-card--slice .eng-card__initial {
+  position: absolute;
+  right: var(--space-3);
+  top: -0.15rem;
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: var(--weight-bold);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  color: color-mix(in srgb, var(--color-accent) 12%, transparent);
+  pointer-events: none;
+  user-select: none;
+}
+
+.eng-card--slice .eng-card__body {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  flex: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .eng-card,
+  .eng-card__media img {
+    transition: none;
+  }
+
+  .eng-card:hover {
+    transform: none;
+  }
+}

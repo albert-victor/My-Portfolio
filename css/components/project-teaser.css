@@ -59,6 +59,15 @@
   color: var(--color-text-muted);
 }
 
+.project-teaser__cta {
+  margin-top: 0.35rem;
+  font-size: var(--text-caption);
+  font-weight: var(--weight-semibold);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
 @media (prefers-reduced-motion: reduce) {
   .project-teaser,
   .project-teaser__media img {

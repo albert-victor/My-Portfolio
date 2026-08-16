@@ -11,9 +11,19 @@
   gap: 0.2rem;
   padding: 0.28rem;
   border-radius: 999px;
-  border: 1px solid color-mix(in srgb, var(--color-border) 70%, transparent);
-  background: color-mix(in srgb, var(--color-bg-elevated) 92%, transparent);
-  box-shadow: 0 4px 16px rgba(18, 23, 28, 0.04);
+  border: 1px solid color-mix(in srgb, var(--color-accent) 24%, var(--color-border) 55%);
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--color-bg-elevated) 78%, transparent),
+      color-mix(in srgb, var(--color-accent) 8%, var(--color-bg-elevated) 70%)
+    );
+  backdrop-filter: blur(22px) saturate(220%) brightness(1.03);
+  -webkit-backdrop-filter: blur(22px) saturate(220%) brightness(1.03);
+  box-shadow:
+    0 8px 28px rgba(18, 23, 28, 0.09),
+    0 0 36px rgba(46, 196, 182, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.62);
   overflow: visible;
 }
 
@@ -284,9 +294,18 @@ html[data-theme="dark"] .works-mega__card[aria-current="page"] {
 }
 
 html[data-theme="dark"] .site-nav__list {
-  background: rgba(255, 255, 255, 0.06);
-  border-color: rgba(255, 255, 255, 0.08);
-  box-shadow: none;
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.1),
+      color-mix(in srgb, var(--color-accent) 16%, rgba(255, 255, 255, 0.06))
+    );
+  border-color: color-mix(in srgb, var(--color-accent) 28%, rgba(255, 255, 255, 0.1));
+  box-shadow:
+    0 10px 32px rgba(0, 0, 0, 0.28),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(24px) saturate(240%);
+  -webkit-backdrop-filter: blur(24px) saturate(240%);
 }
 
 html[data-theme="dark"] .site-nav__link[aria-current="page"] {

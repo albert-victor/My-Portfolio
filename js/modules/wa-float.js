@@ -5,13 +5,15 @@
 import { qs } from "../utils/dom.js";
 import { SITE } from "../utils/constants.js";
 import { prefersReducedMotion } from "../utils/dom.js";
-
+import { mountInPageDock } from "./back-to-top.js";
 const PHRASES = [
   "Let's work together",
   "Ask about a brief",
   "Need a website?",
+  "Need a mobile app?",
+  "Need a graphics designer?",
   "Building a system?",
-  "Graphics project?",
+  "Brand visuals?",
   "Available for hire",
 ];
 
@@ -65,8 +67,7 @@ export function initWhatsAppFloat() {
     </a>
   `;
 
-  document.body.appendChild(root);
-
+  mountInPageDock(root);
   const chip = qs("[data-wa-chip]", root);
   const copy = qs("[data-wa-copy]", root);
 

@@ -1,5 +1,4 @@
-# AVM Portfolio – https://github.com/albert-victor/My-Portfolio
-# Replace YOUR-DOMAIN.com with your live domain before deploying.
+# AVM Portfolio – https://albartportfolio.uk
 
 User-agent: *
 Allow: /
@@ -9,7 +8,11 @@ Disallow: /previews/
 Disallow: /components/
 Disallow: /api/
 Disallow: /data/
+Disallow: /cv/
 Disallow: /stats.html
+Disallow: /work/mobile-apps.html
+Disallow: /work/sample-platform.html
+Disallow: /work/sample-marketing-site.html
+Disallow: /work/sample-brand.html
 
-# Sitemap (update domain when you go live)
-Sitemap: https://YOUR-DOMAIN.com/sitemap.xml
+Sitemap: https://albartportfolio.uk/sitemap.xml

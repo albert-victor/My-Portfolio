@@ -1,0 +1,11 @@
+# Source art not linked from the live site (copies live under assets/)
+graphics
+
+# Private / server-only (not for static hosting)
+data
+api/config.php
+
+# Standard excludes
+.git
+node_modules
+.DS_Store

@@ -7,7 +7,7 @@
   isolation: isolate;
   background-color: var(--color-header-bg);
   border-bottom: 1px solid transparent;
-  box-shadow: 0 0 48px rgba(46, 196, 182, 0.06);
+  box-shadow: 0 1px 0 rgba(12, 17, 22, 0.04);
   transition:
     border-color var(--duration-med) var(--ease-out),
     box-shadow var(--duration-med) var(--ease-out),
@@ -21,6 +21,16 @@
   inset: 0;
   z-index: -1;
   pointer-events: none;
+  background: var(--color-header-bg);
+  backdrop-filter: blur(16px) saturate(120%);
+  -webkit-backdrop-filter: blur(16px) saturate(120%);
+}
+
+html[data-theme="dark"] .site-header {
+  box-shadow: 0 0 48px rgba(46, 196, 182, 0.06);
+}
+
+html[data-theme="dark"] .site-header::before {
   background:
     linear-gradient(
       135deg,
@@ -33,21 +43,25 @@
 }
 
 .site-header.is-scrolled {
-  border-bottom-color: color-mix(in srgb, var(--color-accent) 22%, var(--color-border) 45%);
-  box-shadow:
-    0 12px 36px rgba(12, 17, 22, 0.12),
-    0 0 56px rgba(46, 196, 182, 0.12),
-    inset 0 1px 0 rgba(255, 255, 255, 0.42);
-  background-color: color-mix(in srgb, var(--color-bg-elevated) 52%, transparent);
+  border-bottom-color: var(--color-border);
+  box-shadow: 0 1px 0 rgba(12, 17, 22, 0.06);
+  background-color: var(--color-header-bg);
 }
 
 .site-header.is-scrolled::before {
-  backdrop-filter: blur(32px) saturate(260%) brightness(1.06);
-  -webkit-backdrop-filter: blur(32px) saturate(260%) brightness(1.06);
+  backdrop-filter: blur(18px) saturate(120%);
+  -webkit-backdrop-filter: blur(18px) saturate(120%);
 }
 
 html[data-theme="dark"] .site-header.is-scrolled {
+  border-bottom-color: color-mix(in srgb, var(--color-accent) 22%, var(--color-border) 45%);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+  background-color: color-mix(in srgb, var(--color-bg-elevated) 52%, transparent);
+}
+
+html[data-theme="dark"] .site-header.is-scrolled::before {
+  backdrop-filter: blur(32px) saturate(260%) brightness(1.06);
+  -webkit-backdrop-filter: blur(32px) saturate(260%) brightness(1.06);
 }
 
 .site-header__inner {
@@ -289,8 +303,35 @@ html[data-theme="dark"] .theme-toggle__icon--moon {
 }
 
 @media (max-width: 48rem) {
+  .site-header__inner {
+    justify-content: flex-start;
+    gap: 0.35rem;
+  }
+
+  .site-header__brand {
+    flex: 1 1 auto;
+    min-width: 0;
+    max-width: none;
+  }
+
+  .site-header__actions {
+    order: 2;
+    flex-shrink: 0;
+  }
+
+  .site-nav {
+    order: 3;
+    flex-shrink: 0;
+  }
+
   .site-header__actions .btn--secondary.resume-menu__trigger {
     min-width: auto;
     padding-inline: var(--space-3);
+    font-weight: var(--weight-semibold);
+  }
+
+  .theme-toggle {
+    width: 2.4rem;
+    height: 2.4rem;
   }
 }

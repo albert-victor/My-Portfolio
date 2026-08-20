@@ -21,9 +21,13 @@ AddDefaultCharset UTF-8
   </FilesMatch>
 </IfModule>
 
-# Protect data directory
+# ── Canonical URL + SEO redirects ───────────────────────────────
 <IfModule mod_rewrite.c>
   RewriteEngine On
+
+  # Redirect index.html to root (avoid duplicate URLs in Google)
+  RewriteRule ^index\.html$ / [R=301,L]
+
   RewriteRule ^data/ - [F,L]
 </IfModule>
 

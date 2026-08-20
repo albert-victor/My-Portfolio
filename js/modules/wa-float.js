@@ -10,16 +10,20 @@ const PHRASES = [
   "Let's work together",
   "Ask about a brief",
   "Need a website?",
-  "Need a mobile app?",
-  "Need a graphics designer?",
   "Building a system?",
   "Brand visuals?",
   "Available for hire",
+  "Let's connect",
+  "Open to networking",
+  "Share your experience",
+  "Talk about a project",
+  "Collaborate on ideas",
+  "Swap industry insights",
 ];
 
-const OPEN_MS = 5000;
-const IDLE_MS = 16000;
-const FIRST_DELAY_MS = 2500;
+const OPEN_MS = 2200;
+const IDLE_MS = 3500;
+const FIRST_DELAY_MS = 1000;
 
 function buildWhatsAppUrl() {
   const text = encodeURIComponent("Hi Albert – I'd like to discuss a project.");

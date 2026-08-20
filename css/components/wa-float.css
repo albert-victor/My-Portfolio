@@ -21,7 +21,7 @@
   border-radius: 999px;
   border: 1px solid rgba(255, 255, 255, 0.72);
   background: rgba(255, 255, 255, 0.94);
-  color: #1a1f24;
+  color: var(--color-text);
   box-shadow:
     0 8px 22px rgba(14, 17, 20, 0.14),
     0 2px 6px rgba(14, 17, 20, 0.06);
@@ -47,7 +47,7 @@
     0 12px 28px rgba(14, 17, 20, 0.18),
     0 4px 10px rgba(31, 170, 97, 0.16);
   border-color: rgba(31, 170, 97, 0.35);
-  color: #1a1f24;
+  color: var(--color-text);
 }
 
 .wa-float__icon-wrap {
@@ -85,12 +85,12 @@
 }
 
 .wa-float__text {
-  font-size: 0.76rem;
-  font-weight: var(--weight-semibold);
+  font-size: 0.68rem;
+  font-weight: var(--weight-medium);
   letter-spacing: 0.01em;
-  color: rgba(26, 31, 36, 0.82);
+  color: rgba(26, 31, 36, 0.78);
   white-space: nowrap;
-  animation: wa-cinematic 6s ease-in-out infinite;
+  animation: wa-cinematic 3.5s ease-in-out infinite;
   transition:
     opacity 420ms var(--ease-out),
     transform 420ms var(--ease-out),
@@ -129,7 +129,7 @@ html[data-theme="dark"] .wa-float__chip {
   }
 
   .wa-float__text {
-    font-size: 0.68rem;
+    font-size: 0.62rem;
   }
 }
 

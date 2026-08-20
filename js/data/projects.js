@@ -125,7 +125,7 @@ export const projects = [
     year: "2026",
     featured: true,
     cover: "assets/images/projects/covers/matembo-safari.jpg",
-    href: "https://www.matembosafaris.com",
+    href: "https://matembosafaris.com",
     external: true,
   },
   {

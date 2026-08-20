@@ -38,44 +38,117 @@
 
       <div class="site-nav__backdrop" data-nav-backdrop></div>
 
-      <ul class="site-nav__list" id="primary-nav">
-        <li><a class="site-nav__link" data-nav-link href="index.html">Home</a></li>
-        <li class="site-nav__item" data-works-menu>
-          <button
-            class="site-nav__link"
-            type="button"
-            data-works-trigger
-            aria-expanded="false"
-            aria-haspopup="true"
-            aria-controls="works-mega"
-          >
-            Works
-            <span class="site-nav__caret" aria-hidden="true"></span>
+      <div class="site-nav__drawer" id="primary-nav">
+        <div class="site-nav__drawer-head">
+          <p class="site-nav__drawer-title">
+            <span class="site-nav__drawer-avatar" aria-hidden="true"></span>
+            <span>Menu</span>
+          </p>
+          <button class="site-nav__close" type="button" data-nav-close aria-label="Close menu">
+            <svg width="22" height="22" aria-hidden="true" focusable="false">
+              <use href="assets/icons/ui/sprite.svg#icon-close"></use>
+            </svg>
           </button>
-          <div class="works-mega" id="works-mega">
-            <div class="works-mega__grid">
-              <a class="works-mega__card" data-works-link href="work/engineering.html">
-                <span class="works-mega__eyebrow">Software</span>
-                <span class="works-mega__title">Engineering</span>
-                <span class="works-mega__text">AI/ML, systems &amp; tools</span>
-              </a>
-              <a class="works-mega__card" data-works-link href="work/web.html">
-                <span class="works-mega__eyebrow">Web</span>
-                <span class="works-mega__title">Development</span>
-                <span class="works-mega__text">Live sites &amp; product fronts</span>
-              </a>
-              <a class="works-mega__card" data-works-link href="work/graphics.html">
-                <span class="works-mega__eyebrow">Graphics</span>
-                <span class="works-mega__title">Design</span>
-                <span class="works-mega__text">Social, church &amp; print</span>
-              </a>
+        </div>
+
+        <ul class="site-nav__list">
+          <li><a class="site-nav__link" data-nav-link href="index.html">Home</a></li>
+          <li class="site-nav__item" data-works-menu>
+            <button
+              class="site-nav__link"
+              type="button"
+              data-works-trigger
+              aria-expanded="false"
+              aria-haspopup="true"
+              aria-controls="works-mega"
+            >
+              Works
+              <span class="site-nav__caret" aria-hidden="true"></span>
+            </button>
+            <div class="works-mega" id="works-mega">
+              <div class="works-mega__grid">
+                <a class="works-mega__card" data-works-link href="work/engineering.html">
+                  <span class="works-mega__eyebrow">Software</span>
+                  <span class="works-mega__title">Engineering</span>
+                  <span class="works-mega__text">AI/ML, systems &amp; tools</span>
+                </a>
+                <a class="works-mega__card" data-works-link href="work/web.html">
+                  <span class="works-mega__eyebrow">Web</span>
+                  <span class="works-mega__title">Development</span>
+                  <span class="works-mega__text">Live sites &amp; product fronts</span>
+                </a>
+                <a class="works-mega__card" data-works-link href="work/graphics.html">
+                  <span class="works-mega__eyebrow">Graphics</span>
+                  <span class="works-mega__title">Design</span>
+                  <span class="works-mega__text">Social, church &amp; print</span>
+                </a>
+              </div>
             </div>
+          </li>
+          <li><a class="site-nav__link" data-nav-link href="about.html">About me</a></li>
+          <li><a class="site-nav__link" data-nav-link href="services.html">My services</a></li>
+          <li><a class="site-nav__link" data-nav-link href="contact.html">Contact</a></li>
+        </ul>
+
+        <div class="site-nav__drawer-foot">
+          <p class="site-nav__drawer-label">Connect with me</p>
+          <div class="site-nav__social" aria-label="Social links">
+            <a
+              class="site-nav__social-link site-nav__social-link--linkedin"
+              href="https://www.linkedin.com/in/albart-mwamalumbili-b3b69b377/"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="LinkedIn"
+            >
+              <svg width="20" height="20" aria-hidden="true" focusable="false">
+                <use href="assets/icons/ui/sprite.svg#icon-linkedin"></use>
+              </svg>
+            </a>
+            <a
+              class="site-nav__social-link site-nav__social-link--github"
+              href="https://github.com/albert-victor"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="GitHub"
+            >
+              <svg width="20" height="20" aria-hidden="true" focusable="false">
+                <use href="assets/icons/ui/sprite.svg#icon-github"></use>
+              </svg>
+            </a>
+            <a
+              class="site-nav__social-link site-nav__social-link--instagram"
+              href="https://www.instagram.com/_i_am_albertvictor/"
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="Instagram"
+            >
+              <svg width="20" height="20" aria-hidden="true" focusable="false">
+                <use href="assets/icons/ui/sprite.svg#icon-instagram"></use>
+              </svg>
+            </a>
+            <a
+              class="site-nav__social-link site-nav__social-link--email"
+              href="mailto:mwamalumbilialbart@gmail.com"
+              aria-label="Email"
+            >
+              <svg width="20" height="20" aria-hidden="true" focusable="false">
+                <use href="assets/icons/ui/sprite.svg#icon-mail"></use>
+              </svg>
+            </a>
+            <a
+              class="site-nav__social-link site-nav__social-link--whatsapp"
+              href="https://wa.me/255748952582?text=Hi%20Albert%20%E2%80%93%20I%27d%20like%20to%20discuss%20a%20project."
+              rel="noopener noreferrer"
+              target="_blank"
+              aria-label="WhatsApp"
+            >
+              <svg width="20" height="20" aria-hidden="true" focusable="false">
+                <use href="assets/icons/ui/sprite.svg#icon-whatsapp"></use>
+              </svg>
+            </a>
           </div>
-        </li>
-        <li><a class="site-nav__link" data-nav-link href="about.html">About me</a></li>
-        <li><a class="site-nav__link" data-nav-link href="services.html">My services</a></li>
-        <li><a class="site-nav__link" data-nav-link href="contact.html">Contact</a></li>
-      </ul>
+        </div>
+      </div>
     </nav>
 
     <div class="site-header__actions">

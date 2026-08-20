@@ -8,8 +8,8 @@
   --color-bg-elevated: #ffffff;
   --color-surface: #f4f6f8;
   --color-border: #e4e8ee;
-  --color-text: #0c1116;
-  --color-text-muted: #3a4854;
+  --color-text: #2f383e;
+  --color-text-muted: #5f6c77;
   --color-accent: #0a7d75;
   --color-accent-hover: #086860;
   --color-accent-subtle: rgba(10, 125, 117, 0.12);
@@ -26,9 +26,9 @@
   --shadow-card: 0 1px 2px rgba(12, 17, 22, 0.04), 0 10px 28px rgba(12, 17, 22, 0.07);
   --shadow-lift: 0 18px 40px rgba(12, 17, 22, 0.12);
 
-  /* Typography */
-  --font-display: "Syne", system-ui, sans-serif;
-  --font-body: "Outfit", system-ui, sans-serif;
+  /* Typography – single clean sans stack (matches live when self-hosted fonts fail) */
+  --font-display: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-body: "Outfit", system-ui, -apple-system, "Segoe UI", sans-serif;
 
   --text-hero: clamp(2.75rem, 6vw, 5.5rem);
   --text-h1: clamp(2rem, 3.5vw, 3.25rem);
@@ -103,10 +103,10 @@
 }
 
 html[data-theme="dark"] {
-  --color-bg: #0e1114;
-  --color-bg-elevated: #161b20;
-  --color-surface: #1c2329;
-  --color-border: #2a333c;
+  --color-bg: #1c2126;
+  --color-bg-elevated: #252b31;
+  --color-surface: #2e353c;
+  --color-border: #3a424a;
   --color-text: #e8eef2;
   --color-text-muted: #9aa8b3;
   --color-accent: #2ec4b6;
@@ -115,9 +115,9 @@ html[data-theme="dark"] {
   --color-error: #e85d5d;
   --color-success: #3dcf8e;
   --color-focus: #2ec4b6;
-  --color-on-accent: #0e1114;
-  --color-header-bg: rgba(14, 17, 20, 0.48);
-  --color-footer-bg: #0a0c0e;
+  --color-on-accent: #1c2126;
+  --color-header-bg: rgba(28, 33, 38, 0.82);
+  --color-footer-bg: #171b20;
   --color-footer-text: #e8eef2;
   --color-footer-muted: #9aa8b3;
   --color-overlay-strong: rgba(14, 17, 20, 0.92);

@@ -19,16 +19,20 @@
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   color: inherit;
+  background: var(--color-bg-elevated);
+  transition:
+    border-color var(--duration-fast) var(--ease-out),
+    transform var(--duration-fast) var(--ease-out),
+    box-shadow var(--duration-fast) var(--ease-out);
+}
+
+html[data-theme="dark"] .work-hub-card {
   background:
     linear-gradient(
       160deg,
       color-mix(in srgb, var(--color-bg-elevated) 88%, var(--color-accent) 12%),
       var(--color-bg-elevated)
     );
-  transition:
-    border-color var(--duration-fast) var(--ease-out),
-    transform var(--duration-fast) var(--ease-out),
-    box-shadow var(--duration-fast) var(--ease-out);
 }
 
 .work-hub-card:hover {

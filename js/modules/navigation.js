@@ -8,6 +8,7 @@ export function initNavigation() {
   const header = qs("[data-header]");
   const nav = qs("[data-nav]");
   const toggle = qs("[data-nav-toggle]");
+  const closeBtn = qs("[data-nav-close]", nav || document);
   const links = qsa("[data-nav-link]", nav || document);
   const backdrop = qs("[data-nav-backdrop]", nav || document);
   const worksItem = qs("[data-works-menu]", nav || document);
@@ -44,6 +45,7 @@ export function initNavigation() {
     }
     nav.classList.toggle("is-open", isOpen);
     toggle.setAttribute("aria-expanded", String(isOpen));
+    toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
     document.body.classList.toggle("nav-open", isOpen);
     if (!isOpen) {
       setWorksOpen(false);
@@ -52,11 +54,24 @@ export function initNavigation() {
 
   if (toggle && nav) {
     toggle.addEventListener("click", () => {
-      setOpen(!nav.classList.contains("is-open"));
+      const willOpen = !nav.classList.contains("is-open");
+      setOpen(willOpen);
     });
   }
 
+  if (closeBtn && nav) {
+    closeBtn.addEventListener("click", () => setOpen(false));
+  }
+
   links.forEach((link) => {
+    link.addEventListener("click", () => setOpen(false));
+  });
+
+  qsa(".site-nav__social-link", nav || document).forEach((link) => {
+    link.addEventListener("click", () => setOpen(false));
+  });
+
+  qsa("[data-works-link]", nav || document).forEach((link) => {
     link.addEventListener("click", () => setOpen(false));
   });
 

@@ -137,8 +137,12 @@ html[data-theme="dark"] .contact-social__card--github .contact-social__icon {
   font-family: var(--font-display);
   font-size: 1.25rem;
   font-weight: var(--weight-semibold);
-  margin-bottom: var(--space-4);
+  margin-bottom: var(--space-2);
   color: var(--color-text);
+}
+
+.contact-form-panel__head {
+  margin-bottom: var(--space-4);
 }
 
 .contact-sidebar__intro {
@@ -211,34 +215,81 @@ html[data-theme="dark"] .contact-social__card--github .contact-social__icon {
 }
 
 .contact-form-panel {
-  padding: var(--space-5);
+  padding: var(--space-4) var(--space-5);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
   background: var(--color-bg-elevated);
 }
 
 .contact-form-panel__lead {
-  margin-top: calc(var(--space-4) * -1);
-  margin-bottom: var(--space-5);
+  margin: 0;
+  font-size: var(--text-small);
+  line-height: 1.5;
   color: var(--color-text-muted);
   max-width: 42ch;
 }
 
 .form--contact {
   max-width: none;
+  gap: 0;
+}
+
+.form--contact .form__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.form--contact .form__field {
+  gap: var(--space-1);
+}
+
+.form--contact .form__control {
+  background-color: var(--color-bg);
+}
+
+.form--contact .form__control--textarea {
+  min-height: 7.5rem;
 }
 
 .form__row {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 .form__meta {
   display: flex;
-  justify-content: space-between;
-  gap: var(--space-3);
+  justify-content: flex-end;
+  margin-top: var(--space-1);
+}
+
+.form--contact .form__actions {
   margin-top: var(--space-2);
+  padding-top: var(--space-4);
+  border-top: 1px solid var(--color-border);
+  gap: var(--space-2);
+}
+
+.form__note {
+  margin: 0;
+  flex: 1 1 100%;
+  font-size: var(--text-caption);
+  line-height: 1.4;
+  color: var(--color-text-muted);
+}
+
+@media (min-width: 40.01rem) {
+  .form--contact .form__actions {
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+
+  .form__note {
+    flex: 1 1 auto;
+    margin-left: var(--space-2);
+    text-align: right;
+  }
 }
 
 .form__count {

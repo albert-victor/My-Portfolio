@@ -17,14 +17,14 @@
 @import url("components/form.css");
 @import url("components/cta-band.css");
 @import url("components/section-header.css");
-@import url("components/wa-float.css?v=20260816d");
+@import url("components/wa-float.css?v=20260826a");
 @import url("components/back-to-top.css?v=20260816d");
 @import url("components/eng-card-variants.css?v=20260816e");
 
 @import url("pages/home.css");
 @import url("pages/work.css");
 @import url("pages/case-study.css");
-@import url("pages/about.css");
+@import url("pages/about.css?v=20260826c");
 @import url("pages/services.css");
 @import url("pages/contact.css?v=20260821g");
 @import url("pages/field.css");

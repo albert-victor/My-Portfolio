@@ -39,7 +39,8 @@ export const SITE = {
   /** Production URL – no trailing slash. Used for canonical/OG tags. */
   baseUrl: "https://albartportfolio.uk",
   resumes: {
-    engineering: "assets/cvs/resume-software-engineering.pdf",
+    primary: "assets/cvs/CV_ALBART_MWAMALUMBILI.pdf",
+    engineering: "assets/cvs/CV_ALBART_MWAMALUMBILI.pdf",
     web: "cv/web-designer.html",
     design: "cv/graphics-designer.html",
   },

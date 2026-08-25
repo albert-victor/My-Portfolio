@@ -124,6 +124,12 @@ html[data-theme="dark"] .wa-float__chip {
     bottom: 0.75rem;
   }
 
+  body.nav-open .wa-float {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
   .wa-float__chip {
     padding-right: 0.7rem;
   }

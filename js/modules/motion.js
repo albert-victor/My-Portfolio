@@ -23,6 +23,7 @@ function collectRevealTargets() {
       ".eng-card",
       ".field-story__item",
       ".gallery-item",
+      ".case-gallery__item",
       ".project-teaser",
       ".clients__intro",
       ".clients__marquee",
@@ -70,7 +71,7 @@ function assignDirections(targets) {
 
     if (
       el.matches(
-        ".spec-card, .eng-card, .field-card, .gallery-item, .project-teaser, .work-grid__item, .service-card, .stack-item"
+        ".spec-card, .eng-card, .field-card, .gallery-item, .case-gallery__item, .project-teaser, .work-grid__item, .service-card, .stack-item"
       )
     ) {
       el.setAttribute("data-reveal", "up");

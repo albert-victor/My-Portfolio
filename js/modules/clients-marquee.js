@@ -1,49 +1,92 @@
 /**
- * Clients logo strip: elegant, seamless continuous loop.
- * Clones the list once so the motion never visibly jumps or bounces.
+ * Clients logo strip: two rows scroll in opposite directions, seamless infinite loop.
  */
 
-import { qs } from "../utils/dom.js";
+import { qsa, qs } from "../utils/dom.js";
 
-export function initClientsMarquee() {
-  const root = qs("[data-clients-marquee]");
-  if (!root) {
-    return;
+function prepareTrack(track) {
+  const list = qs(".clients__list", track);
+  if (!list) {
+    return 0;
   }
 
-  const track = qs(".clients__track", root);
-  const list = qs(".clients__list", root);
-  if (!track || !list) {
-    return;
-  }
-
-  // Reset any previous clones, then add exactly one mirror copy for a seamless wrap.
   track.querySelectorAll(".clients__list[data-clone]").forEach((node) => node.remove());
-  const clone = list.cloneNode(true);
-  clone.setAttribute("aria-hidden", "true");
-  clone.setAttribute("data-clone", "true");
-  track.appendChild(clone);
 
-  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
-  const speed = 40; // px per second – calm, premium pace
-  let raf = 0;
-  let running = false;
-  let offset = 0;
-  let lastTs = 0;
-  let loopWidth = 0;
+  const marquee = track.closest(".clients__marquee");
+  const minWidth = (marquee?.offsetWidth || window.innerWidth) * 2;
+  let cloneIndex = 0;
+
+  while (track.scrollWidth < minWidth) {
+    const clone = list.cloneNode(true);
+    clone.setAttribute("aria-hidden", "true");
+    clone.setAttribute("data-clone", "true");
+    clone.dataset.cloneIndex = String(cloneIndex++);
+    track.appendChild(clone);
+  }
+
+  const firstClone = qs(".clients__list[data-clone]", track);
+  if (!firstClone) {
+    return list.scrollWidth;
+  }
+
+  const loopWidth = firstClone.offsetLeft - list.offsetLeft;
+  return loopWidth > 0 ? loopWidth : list.scrollWidth;
+}
+
+function initSyncedMarquee(root) {
+  const marquees = qsa(".clients__marquee", root);
+  if (!marquees.length) {
+    return;
+  }
+
+  const rows = marquees
+    .map((marquee, index) => {
+      const track = qs(".clients__track", marquee);
+      if (!track) {
+        return null;
+      }
+
+      return {
+        track,
+        loopWidth: 0,
+        offset: 0,
+        reverse: index % 2 === 1,
+      };
+    })
+    .filter(Boolean);
+
+  if (!rows.length) {
+    return;
+  }
 
   const measure = () => {
-    // Exact repeat distance = where the clone begins minus where the list begins
-    // (this naturally includes the flex gap between the two lists).
-    loopWidth = clone.offsetLeft - list.offsetLeft;
-    if (loopWidth <= 0) {
-      loopWidth = list.scrollWidth;
-    }
+    rows.forEach((row) => {
+      row.loopWidth = prepareTrack(row.track);
+      if (row.loopWidth > 0) {
+        row.offset %= row.loopWidth;
+      }
+    });
   };
 
   const apply = () => {
-    track.style.transform = `translate3d(${-offset}px, 0, 0)`;
+    rows.forEach((row) => {
+      if (row.loopWidth <= 0) {
+        row.track.style.transform = "translate3d(0, 0, 0)";
+        return;
+      }
+
+      const distance = row.offset;
+      row.track.style.transform = row.reverse
+        ? `translate3d(${distance - row.loopWidth}px, 0, 0)`
+        : `translate3d(${-distance}px, 0, 0)`;
+    });
   };
+
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const speed = 36;
+  let raf = 0;
+  let running = false;
+  let lastTs = 0;
 
   const stop = () => {
     running = false;
@@ -64,11 +107,15 @@ export function initClientsMarquee() {
     const dt = Math.min(40, ts - lastTs);
     lastTs = ts;
 
-    offset += (speed * dt) / 1000;
-    if (loopWidth > 0 && offset >= loopWidth) {
-      // Seamless wrap: the clone is now exactly where the original was.
-      offset -= loopWidth;
-    }
+    const delta = (speed * dt) / 1000;
+
+    rows.forEach((row) => {
+      row.offset += delta;
+      if (row.loopWidth > 0 && row.offset >= row.loopWidth) {
+        row.offset -= row.loopWidth;
+      }
+    });
+
     apply();
     raf = requestAnimationFrame(tick);
   };
@@ -76,7 +123,9 @@ export function initClientsMarquee() {
   const start = () => {
     if (reduceMotion.matches) {
       stop();
-      offset = 0;
+      rows.forEach((row) => {
+        row.offset = 0;
+      });
       apply();
       return;
     }
@@ -95,9 +144,6 @@ export function initClientsMarquee() {
     "resize",
     () => {
       measure();
-      if (loopWidth > 0) {
-        offset %= loopWidth;
-      }
       apply();
     },
     { passive: true }
@@ -105,7 +151,9 @@ export function initClientsMarquee() {
 
   reduceMotion.addEventListener("change", () => {
     stop();
-    offset = 0;
+    rows.forEach((row) => {
+      row.offset = 0;
+    });
     apply();
     start();
   });
@@ -113,4 +161,8 @@ export function initClientsMarquee() {
   measure();
   apply();
   start();
+}
+
+export function initClientsMarquee() {
+  qsa("[data-clients-marquee]").forEach(initSyncedMarquee);
 }
